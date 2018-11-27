@@ -1,5 +1,6 @@
 @font-face { font-family: 'Mono Regular'; src: url("../font/IBMPlexMono/IBMPlexMono-Regular.otf"); }
 @font-face { font-family: 'Mono Medium'; src: url("../font/IBMPlexMono/IBMPlexMono-Medium.otf"); }
+@font-face { font-family: 'Mono Text'; src: url("../font/IBMPlexMono/IBMPlexMono-Text.otf"); }
 @font-face { font-family: 'Mono Light'; src: url("../font/IBMPlexMono/IBMPlexMono-Light.otf"); }
 @font-face { font-family: 'Sans Regular'; src: url("../font/IBMPlexSans/IBMPlexSans-Regular.otf"); }
 @font-face { font-family: 'Sans SemiBold'; src: url("../font/IBMPlexSans/IBMPlexSans-SemiBold.otf"); }

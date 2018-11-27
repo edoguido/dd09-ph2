@@ -1,7 +1,10 @@
 /* This is CSS code to make the example in question02 work, fell free to remove this when you start working on your project */
 
 .main-viz {
-    max-height: 90vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 64px 0px;
+    margin: 0 auto;
 }
 
 /* languages container */
