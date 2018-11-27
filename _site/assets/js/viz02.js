@@ -58,25 +58,32 @@ function highlightThisOff() {
 pageIndicators = document.querySelectorAll('.page-length-indicator');
 
 for (i = 0; i < pageIndicators.length; i++) {
-    pageIndicators[i].addEventListener('mouseover', showTooltip(), false);
+    pageIndicators[i].addEventListener('mousemove', infoTooltip, false);
 }
 
-function showTooltip(e, c) {
-    for (t = 0; t < pageIndicators.length; t++) {
-        if (pageIndicators[t].matches('.page-length-indicator:hover')) {
-            console.log('hola, buen camino!');
-            var tooltip = document.createElement("div");
-            var c = document.createTextNode(e);
+// function showTooltip() {
+//     for (t = 0; t < pageIndicators.length; t++) {
+//         if (pageIndicators[t].matches('.page-length-indicator:hover')) {
+//             console.log('hola, buen camino!');
+//             infoTooltip();
+//         }
+//     }
+// }
+// showTooltip();
 
-            t.appendChild(c);
-            // document.body.appendChild(t);
-        }
-    }
+//------PER IL TOOLTIP
+var tooltip = document.createElement('div');
+tooltip.classList.add('tooltip');
+
+function infoTooltip(e) {
+    // console.log('ciao');
+    txt = document.createTextNode("ciao");
+    tooltip.appendChild(txt);
+
+    tooltip.classList.add('summon');
+    var x = window.innerWidth;
+    var y = window.innerHeight;
+    tooltip.style.left = e.x + 'px';
+    tooltip.style.top = e.y + 'px';
 }
-showTooltip();
-
-document.addEventListener('mousemove', followMe, false)
-
-function followMe() {
-
-};
+document.addEventListener("mousemove", infoTooltip);

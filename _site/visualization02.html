@@ -1,8 +1,41 @@
+<!-- <div id="tooltip">ciaone</div> -->
+
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg class="main-viz" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
     y="0px" viewBox="0 0 1920 1280" style="enable-background:new 0 0 1920 1280;" xml:space="preserve">
     <style type="text/css">
+        /* Necessario per il tooltip */
+        #tooltip {
+            opacity: 0;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 15px;
+            position: fixed;
+            z-index: 1000;
+            width: auto;
+            height: auto;
+            max-width: 300px;
+
+            border: solid 2px var(--color-main-2);
+            color: var(--color-main-2);
+            background: var(--color-light);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            transition: opacity .15s linear;
+        }
+
+        #tooltip.summon {
+            opacity: .90;
+            transition: opacity .15s ease-in-out;
+        }
+
+        .page-length-indicator:hover {
+            fill: var(--color-main);
+        }
+
         .page-entry {
             transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
@@ -21,25 +54,24 @@
         .stroke-05 {
             stroke-width: 0.5;
         }
-        
+
         .single-law rect {
             fill: var(--color-light);
             transition: fill .2s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
+
         .single-law:hover rect {
             fill: var(--color-main);
             transition: fill .2s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
-        .single-law:hover text, .single-law:hover tspan  {
+
+        .single-law:hover text,
+        .single-law:hover tspan {
             fill: var(--color-light);
         }
 
         .stroke-3 line {
             stroke-width: 3;
-        }
-
-        .page-length-indicator {
-            
         }
 
         .st1 {
@@ -1271,7 +1303,7 @@
         <line class="st15" x1="1664.8" y1="1052.45" x2="1729.8" y2="1052.45" />
     </g>
     <g id="edits_peaks">
-        <g class="page-entry">
+        <g class="page-entry" js-creation-date="20th May, 2008">
             <g>
                 <g>
                     <line class="color-grey stroke-05" x1="121.98" y1="1207.08" x2="123.98" y2="1207.08" />
@@ -1320,7 +1352,7 @@
                 </g>
             </g>
         </g>
-        <g class="page-entry">
+        <g class="page-entry" js-creation-date="18th June, 2008">
             <g>
                 <g>
                     <line class="color-grey stroke-05" x1="121.98" y1="1182.13" x2="123.98" y2="1182.13" />
@@ -2691,16 +2723,15 @@
             </g>
         </g>
         <g class="page-entry">
-            <rect x="625.35" y="359.17" class="st14" width="615.67" height="3.55" />
             <g>
                 <g>
-                    <g>
-                        <line class="color-grey stroke-05" x1="121.98" y1="358.93" x2="123.98" y2="358.93" />
-                        <line class="st16" x1="127.98" y1="358.93" x2="1236.22" y2="358.93" />
-                        <line class="color-grey stroke-05" x1="1238.21" y1="358.93" x2="1240.21" y2="358.93" />
-                    </g>
+                    <line class="color-grey stroke-05" x1="121.98" y1="358.93" x2="123.98" y2="358.93" />
+                    <line class="st16" x1="127.98" y1="358.93" x2="1236.22" y2="358.93" />
+                    <line class="color-grey stroke-05" x1="1238.21" y1="358.93" x2="1240.21" y2="358.93" />
                 </g>
-                <g id="edits_french_2_">
+            </g>
+            <g id="edits_french_2_">
+                <g>
                     <rect x="625.35" y="241.34" class="st14" width="5.09" height="117.82" />
                     <rect x="630.43" y="351.22" class="st14" width="5.09" height="7.94" />
                     <rect x="640.61" y="353.87" class="st14" width="5.09" height="5.3" />
@@ -2752,13 +2783,14 @@
                     <rect x="1225.75" y="357.84" class="st14" width="5.09" height="1.32" />
                     <rect x="1230.84" y="356.52" class="st14" width="5.09" height="2.65" />
                 </g>
-                <text transform="matrix(0.9561 0 0 1 80.3198 359.0103)" class="st10 st11">French</text>
-                <text transform="matrix(1 0 0 1 1257.3311 358.0906)" class="st10 st11">201</text>
+                <rect x="625.35" y="359.17" class="st14" width="615.67" height="3.55" />
+            </g>
+            <text transform="matrix(0.9561 0 0 1 80.3198 359.0103)" class="st10 st11">French</text>
+            <text transform="matrix(1 0 0 1 1257.3311 358.0906)" class="st10 st11">201</text>
+            <g>
+                <polygon class="st7" points="146,353.45 152.13,353.45 148.95,358.05 				" />
                 <g>
-                    <polygon class="st7" points="146,353.45 152.13,353.45 148.95,358.05 				" />
-                    <g>
-                        <path class="st3" d="M151.18,353.95l-2.21,3.2l-2.05-3.2H151.18 M153.08,352.95h-8l3.85,6L153.08,352.95L153.08,352.95z" />
-                    </g>
+                    <path class="st3" d="M151.18,353.95l-2.21,3.2l-2.05-3.2H151.18 M153.08,352.95h-8l3.85,6L153.08,352.95L153.08,352.95z" />
                 </g>
             </g>
         </g>
@@ -3222,7 +3254,3 @@
         </g>
     </g>
 </svg>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<script src="{{ '/assets/js/viz02.js' | relative_path }}"></script>
