@@ -14,6 +14,21 @@
     grid-template-rows: 1fr;
 }
 
+#online-box.filled {
+    fill:#0000FF;
+    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+}
+
+#nodata-box.filled {
+    fill: #7f7fff;
+    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+}
+
+#shutteddown-box.filled{
+    fill: #CE3B19;
+    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+}
+
 .legend {
     grid-column: 3 / 5;
     display: -webkit-box;
