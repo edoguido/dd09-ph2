@@ -1,5 +1,5 @@
 ---
-title: What are the topics in common between Hate&nbsp;Speech and Hate&nbsp;Crime?
+title: How much did the definition of Hate Speech on Wikipedia change over time?
 cover: /assets/images/covers/viz02.jpg
 number: 2
 ---
