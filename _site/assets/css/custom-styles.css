@@ -1,5 +1,9 @@
 /* This is CSS code to make the example in question02 work, fell free to remove this when you start working on your project */
 
+.main-viz {
+    max-height: 90vh;
+}
+
 /* languages container */
 .languages {
     display: grid;
