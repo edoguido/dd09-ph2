@@ -18,7 +18,6 @@ The color of the nodes classifies the degrees of separation between the connecte
 ### Protocol
 ![example of protocol]({{ '/assets/images/protocols/example-protocol.png' | relative_url }})
 
-
 ### Data
 ##### Data Source: [DensityDesign](http://densitydesign.org/)
 ##### Timestamp: 19/10/2018

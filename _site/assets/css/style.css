@@ -1,4 +1,9 @@
-html { --color-main: #e4007c; --color-dark: #0c0a01; --color-light: #fbfef9; --font-display: 'Archivo Black', sans-serif; --font-text: 'Chivo', sans-serif; }
+@font-face { font-family: 'Mono Regular'; src: url("../font/IBMPlexMono/IBMPlexMono-Regular.otf"); }
+@font-face { font-family: 'Mono Medium'; src: url("../font/IBMPlexMono/IBMPlexMono-Medium.otf"); }
+@font-face { font-family: 'Mono Light'; src: url("../font/IBMPlexMono/IBMPlexMono-Light.otf"); }
+@font-face { font-family: 'Sans Regular'; src: url("../font/IBMPlexSans/IBMPlexSans-Regular.otf"); }
+@font-face { font-family: 'Sans SemiBold'; src: url("../font/IBMPlexSans/IBMPlexSans-SemiBold.otf"); }
+html { --color-main: #F78028; --color-main-2: #0033FF; --color-dark: #2a2a2a; --color-light: #fbfef9; --font-display: 'Sans SemiBold', sans-serif; --font-text: 'Sans Regular', sans-serif; }
 
 .display { font-family: var(--font-display); }
 
@@ -96,7 +101,7 @@ header.cover { --grid-gap: 0px; --grid-columns: 14; --grid-rows: 12; height: 100
 
 .cover__image { width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; grid-column: 1 / 15; grid-row: 1 / 7; }
 
-.cover__background { grid-column: 1 / 15; grid-row: 7 / 13; background-color: var(--color-main); }
+.cover__background { grid-column: 1 / 15; grid-row: 7 / 13; background-color: var(--color-main-2); }
 
 .cover__title { grid-column: 2 / 14; grid-row: 8 / 13; margin: 2rem 0 0 0; }
 
@@ -196,7 +201,7 @@ main.content { margin: 5.5rem auto 5rem; }
 
 .question__content img { max-width: 100%; }
 
-footer { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 3fr 3fr 2fr; margin: 0; padding: 3rem calc((100% - var(--container-width)) / 2); background-color: var(--color-main); color: var(--color-light); }
+footer { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 3fr 3fr 2fr; margin: 0; padding: 3rem calc((100% - var(--container-width)) / 2); background-color: var(--color-main-2); color: var(--color-light); }
 
 .footer__image { -o-object-fit: contain; object-fit: contain; grid-row: 3; padding-top: 1.2rem; }
 

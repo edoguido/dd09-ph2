@@ -1,37 +1,5 @@
 /* This is CSS code to make the example in question02 work, fell free to remove this when you start working on your project */
 
-@font-face {
-    font-family: 'Mono Regular';
-    src: url('../font/IBMPlexMono/IBMPlexMono-Regular.otf');
-}
-@font-face {
-    font-family: 'Mono Medium';
-    src: url('../font/IBMPlexMono/IBMPlexMono-Medium.otf');
-}
-@font-face {
-    font-family: 'Mono Light';
-    src: url('../font/IBMPlexMono/IBMPlexMono-Light.otf');
-}
-
-@font-face {
-    font-family: 'Sans Regular';
-    src: url('../font/IBMPlexSans/IBMPlexSans-Regular.otf');
-}
-@font-face {
-    font-family: 'Sans SemiBold';
-    src: url('../font/IBMPlexSans/IBMPlexSans-SemiBold.otf');
-}
-
-/* variables */
-html {
-    --color-main: #F78028;
-    --color-main-2: #0033FF;
-    --color-dark: #0c0a01;
-    --color-light: #fbfef9;
-    --font-display: 'Sans SemiBold', sans-serif;
-    --font-text: 'Sans Regular', sans-serif;
-  }
-
 /* languages container */
 .languages {
     display: grid;
