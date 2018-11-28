@@ -17,6 +17,30 @@
         transition: fill .6s cubic-bezier(.65, 0, .15, 1);
     }
 
+    .online-s{
+        fill:white;
+        stroke:#0000FF;
+        stroke-width:1.5;
+        stroke-miterlimit:10;
+        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    }
+    
+    .nodata-s{
+        fill:white;
+        stroke:#7f7fff;
+        stroke-width:1.5;
+        stroke-miterlimit:10;
+        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    }
+    
+    .shutteddown-s{
+        fill:white;
+        stroke:#CE3B19;
+        stroke-width:1.5;
+        stroke-miterlimit:10;
+        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    }
+
     #online-box.filled {
         transition: fill .6s cubic-bezier(.65, 0, .15, 1);
         fill:#0000FF;
@@ -34,6 +58,7 @@
 
     #online-text, #nodata-text, #shutteddown-text {
         transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        cursor: pointer;
     }
 
     #online-text.white, #nodata-text.white, #shutteddown-text.white {
@@ -46,23 +71,35 @@
     /* ----------- Classi mosaic chart ----------- */
     /* ------------------------------------------- */
 
+    .direct, .referrals, .search, .social, .mail, .display {
+        opacity: .5;
+        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
+        opacity .45s cubic-bezier(.65, 0, .15, 1);
+    }
+
+    .direct-on, .referrals-on, .search-on, .social-on, .mail-on, .display-on {
+        opacity: 1;
+        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
+        opacity .45s cubic-bezier(.65, 0, .15, 1);
+    }
+
     .direct {
         fill:white;
         stroke:#0000FF;
         stroke-width:1.5;
         stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .direct-on{
         fill: #0000FF;
         stroke:#0000FF;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .direct-numbers {
         fill: #0000FF;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
     
     .referrals{
@@ -70,18 +107,18 @@
         stroke:#311AD4;
         stroke-width:1.5;
         stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .referrals-on{
         fill: #311AD4;
         stroke:#311AD4;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .referrals-numbers {
         fill:#311AD4;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .search {
@@ -89,18 +126,18 @@
         stroke:#643F99;
         stroke-width:1.5;
         stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .search-on{
         fill: #643F99;
         stroke:#643F99;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .search-numbers {
         fill:#643F99;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .social {
@@ -108,19 +145,19 @@
         stroke:#944D7E;
         stroke-width:1.5;
         stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .social-on{
         fill: #944D7E;
         stroke:#944D7E;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
 
     .social-numbers {
         fill: #944D7E;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .mail {
@@ -128,18 +165,18 @@
         stroke:#C76653;
         stroke-width:1.5;
         stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .mail-on{
         fill: #C76653;
         stroke:#C76653;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .mail-numbers {
         fill:#C76653;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
 
@@ -148,19 +185,29 @@
         stroke:#F78028;
         stroke-width:1.5;
         stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
     }
 
     .display-on {
         fill:#F78028;
         stroke:#F78028;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        
+    }
+
+    .numbers {
+        opacity: .5;
+        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
+        opacity .6s cubic-bezier(.65, 0, .15, 1);
     }
 
     .numbers-on {
+        opacity: 1;
         fill: white;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
+        opacity .6s cubic-bezier(.65, 0, .15, 1);
     }
+
+
 
     .display-box, .mail-box, .social-box, .search-box, .referrals-box, .direct-box {
         transition: fill .6s cubic-bezier(.65, 0, .15, 1),
@@ -228,7 +275,10 @@
 	.st44{clip-path:url(#SVGID_56_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
     .st45{clip-path:url(#SVGID_58_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
     
-	<!-- .st46{opacity:0.5;} -->
+    /* .st46{opacity:0.5;} */
+    .st460 {
+        stroke:#7f7fff;
+    }
 	.st47{clip-path:url(#SVGID_60_);fill:none;stroke:#7f7fff;stroke-width:1.42;stroke-miterlimit:10;}
     .st48{clip-path:url(#SVGID_62_);fill:none;stroke:#7f7fff;stroke-width:1.42;stroke-miterlimit:10;}
     .st490{fill:#7f7fff}
@@ -237,7 +287,7 @@
     .st51{font-size:18px;}
 
     .st520{fill:none;stroke:#0000FF;stroke-width:1.5;stroke-miterlimit:10;}
-    .st52{opacity:0.5;fill:none;stroke:#0000FF;stroke-width:1.5;stroke-miterlimit:10;}
+    .st52{fill:none;stroke:#7f7fff;stroke-width:1.5;stroke-miterlimit:10;}
     
 	.st53{fill:none;stroke:#CE3B19;stroke-width:1.5;stroke-miterlimit:10;}
     .st54{fill:#CE3B19;}
@@ -246,8 +296,8 @@
 	.st56{font-size:19.6896px;}
     .st57{font-size:13.7228px;}
 
-	.st60{fill:none;stroke:#311AD4;stroke-width:3;stroke-miterlimit:10;}
-    .st61{fill:none;stroke:#311AD4;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:3.8376,3.8376;}
+	.st60{fill:none;stroke:#7f7fff;stroke-width:3;stroke-miterlimit:10;}
+    .st61{fill:none;stroke:#7f7fff;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:3.8376,3.8376;}
     
 	.st62{fill:none;stroke:#643F99;stroke-width:1.5;stroke-miterlimit:10;}
 	.st63{fill:#6333A9;}
