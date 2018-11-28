@@ -8,7 +8,7 @@
 }
 
 .font-size-3 {
-    font-size: 12px;
+    font-size: 10px;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
