@@ -1,26 +1,27 @@
 ---
-title: Linea grafico Jay
+title: 2.2 Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?
 cover: /assets/images/covers/viz02.jpg
 number: 3
 ---
-### Description
 
-As we noticed in the last protocol, we can observe a correlation between Hate Speech and violent behaviours. Indeed, there seems to be a pattern by which hate speech often results in violent events recognized as hate crime. We therefore decided to investigate how are these terms related to each other, trying to understand some of the relevant features they have in common. In order to do so, we identified and analyzed the “See Also” pages in Wikipedia related to the Hate Speech and Hate Crime pages.
+### Description 
 
-As a result, the graph shows the main nodes which are the starting poles of the map (Hate Speech and Hate Crime) and the connected results of their “See Also” connections. 
+After having analyzed the peaks of edits of the Hate Speech Wikipedia pages, we decided to focus on the views peaks. Therefore, this visualization was designed in order to put in relation the peaks of views per month on the Wikipedia pages about Hate Speech in the last three years, to the events that may have caused them due to their public resonance.
 
-<!-- ![example of secondary visualization]({{ '/assets/images/example-mid-viz.svg' | relative_url }}) -->
+As it’s evident from the graph there are two pages that stand out: the [Hate Speech English page](https://en.wikipedia.org/wiki/Hate_speech) was the most viewed counting a total of a little bit more than a million views, and it corresponds to the orange line; the [Hate Speech Japanese page](https://ja.wikipedia.org/wiki/%E3%83%98%E3%82%A4%E3%83%88%E3%82%B9%E3%83%94%E3%83%BC%E3%83%81) follows closely, and it corresponds to the blue line. All the others Wikipedia languages that have a Hate Speech page are displayed on the top right of the visualization in decreasing order: as it’s clear from the amounts of the other Wikipedia Hate Speech pages, the other languages are not comparable with the first two, so we decided to sum them up in one grey line and consider only the total month average.
 
-The diameter of the nodes depends on the interest for the page, i.e. the number of total views of the Wikipedia page from 07/01/2015 to 11/17/2018. 
+Against our expectations, the highest peak was registered by the Japanese page in June 2016: thanks to Google Trends we discovered that this huge interest for Hate Speech was probably caused by the resonance of the [Anti-Korean hate speech rally](https://www.japantimes.co.jp/news/2016/06/05/national/anti-korean-hate-speech-rally-called-off-kawasaki-amid-protests/#.W_7I4JNKjOR) that was called off in Nagasaki amid protests on June 6, 2016, which came shortly after the [“Hate Speech Act”](https://en.wikipedia.org/wiki/Hate_Speech_Act_of_2016_(Japan)) that passed in Japan on May 25, 2016. The two other visible peaks corresponds to the [Charlottesville attack](https://en.wikipedia.org/wiki/Unite_the_Right_rally) in the US which took place in August 11-12, 2017, and to the [cancellation of the Anime adaptation of ‘Young Again in Another World’](https://www.japantimes.co.jp/news/2018/06/07/national/anime-adaptation-young-another-world-canceled-offensive-tweets-author-mine/#.W_7I8pNKjOS) in Japan on June 8, 2018 after past discriminatory tweets by author Mine on China and South Korea had sparked controversy.
 
-The color of the nodes classifies the degrees of separation between the connected topics and the starting poles. We can therefore observe that the pages which directly link Hate Speech to Hate Crime with one degree of separation are: “Freedom of thought”, “Thoughtcrime”, “Hate mail” and “Gay bashing”. Trying to collect these results by their overall topic we defined which are the main and recurring macro-categories in the map, that can be described as the main themes that characterize the correlation between Hate Speech and Hate Crime: “Racial Discrimination”, “Racist organizations”, “Racial based violence”, “LGBT Discrimination”, “Violence”, “Discrimination”, “Hate Speech vs. Free Speech”, “Historical” and “Political”.
+This visualization clarifies the fact that manifestations of hate and violence have direct consequences on public interest about hate speech, since people tend to look for information about it after these kind of events in order to better understand this complex phenomenon.
+
 
 ### Protocol
-![example of protocol]({{ '/assets/images/protocols/example-protocol.png' | relative_url }})
+
+At first, we collected the data of the number of views per month for the Hate Speech page of each Wikipedia language. This information was manually scraped and organized in an Excel file from the “View History - Pageviews” section ([Wikimedia Tool Forge-Langviews Analysis](https://tools.wmflabs.org/langviews/)), selecting the “all time” period (so, since July 1, 2015 to October 31, 2015). We later organized the pages in decreasing order of views to compare them and to understand which were the most viewed and when there were peaks of visualizations. After having analyzed our Excel file, we decided to focus only on the English and the Japanese pages since they have been the most viewed in the last 3 years, discarding all the languages that were below 100k views in total. At this point, we started looking for specific events that may have caused specific peaks of views for the English and the Japanese page. To do so, we used [Google Trends](https://trends.google.com/trends/?geo=US): we started by identifying the peaks in Google searches for “hate speech” in the same time period in the specific countries (US and Japan) for the English and the Japanese language; then, we checked if the these peaks matched with the ones of the views of Hate Speech on Wikipedia. Then, we analyzed the most related queries on Google Trends and made an advanced research on Google News of the first query in that same specific time period. Afterwards, we analyzed the first 5 results to confirm the event that was associated with the peak. 
+The final Excel file was then uploaded to [RawGraphs](https://rawgraphs.io/) in order to start displaying the data; the resulting SVG file was later refined with Adobe Illustrator.
+
 
 ### Data
-##### Data Source: [DensityDesign](http://densitydesign.org/)
-##### Timestamp: 19/10/2018
-##### [View Data (500Kb)](http://densitydesign.org/)
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+##### Data Source: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page), [Wikimedia Tool Forge-Langviews Analysis](https://tools.wmflabs.org/langviews/), [Google Trends](https://trends.google.com/trends/?geo=US)
+##### Timestamp: 11/15/2018
+##### [View Data (25 KB)](http://densitydesign.org/)
