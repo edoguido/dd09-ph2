@@ -7,18 +7,13 @@ var onlineGraph = document.getElementById("online");
 var nodataGraph = document.getElementById("nodata");
 var shutteddownGraph = document.getElementById("shutteddown");
 
-var onlineRect = document.getElementById("online-box");
-var nodataRect = document.getElementById("nodata-box");
-var shutteddownRect = document.getElementById("shutteddown-box");
+var onlineRect = document.getElementById("online-box")
+var nodataRect = document.getElementById("nodata-box")
+var shutteddownRect = document.getElementById("shutteddown-box")
 
 var divider = document.getElementById("rect-divider");
 
-
-
 // Onload
-var directEl = document.querySelectorAll('.direct');
-var searchEl = document.querySelectorAll('.search');
-
 window.onload = onlineGraph.classList.add("on"),
                 onlineText.classList.add("white"),
                 onlineRect.classList.add("filled"),
@@ -32,7 +27,7 @@ for (i = 0; i < buttons.length; i++) {
 
 // Funzioni
 function highlightButton() {
-    // console.log("click");
+    console.log("click");
     onlineGraph.classList.remove("on");
     nodataGraph.classList.remove("on");
     shutteddownGraph.classList.remove("on");
@@ -118,4 +113,3 @@ $(document).ready(function(){
         $(".display-box").toggleClass("box-on");
     });
 });
-
