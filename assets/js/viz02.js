@@ -55,35 +55,70 @@ function highlightThisOff() {
 
 // ---------------------------------------------------
 
-pageIndicators = document.querySelectorAll('.page-length-indicator');
 
-for (i = 0; i < pageIndicators.length; i++) {
-    pageIndicators[i].addEventListener('mousemove', infoTooltip, false);
-}
-
-// function showTooltip() {
-//     for (t = 0; t < pageIndicators.length; t++) {
-//         if (pageIndicators[t].matches('.page-length-indicator:hover')) {
-//             console.log('hola, buen camino!');
-//             infoTooltip();
-//         }
-//     }
+// for (i = 0; i < entries.length; i++) {
+//     entries[i].addEventListener('mousemove', summonTooltip, false);
+//     entries[i].addEventListener('mouseout', hideTooltip, false);
 // }
-// showTooltip();
 
-//------PER IL TOOLTIP
+
 var tooltip = document.createElement('div');
-tooltip.classList.add('tooltip');
+tooltip.id = 'tooltip';
+document.body.appendChild(tooltip);
 
-function infoTooltip(e) {
-    // console.log('ciao');
-    txt = document.createTextNode("ciao");
-    tooltip.appendChild(txt);
+entries = document.querySelectorAll('.page-entry');
+createds = document.querySelectorAll('.page-entry > g > polygon.st7');
 
-    tooltip.classList.add('summon');
-    var x = window.innerWidth;
-    var y = window.innerHeight;
-    tooltip.style.left = e.x + 'px';
-    tooltip.style.top = e.y + 'px';
+for (i = 0; i < entries.length; i++) {
+    entries[i].addEventListener('mouseover', (event) => {
+        currentEntry = entries[i];
+        for (t = 0; t < entries.length; t++) {
+            // // console.log(entries[t].childNodes[t]);
+            // currentEntry = entries[t];
+            // currentCreateds = createds[t];
+            // if (currentEntry.matches('.page-entry:hover')) {
+            //     if (entries.indexOf == (4 || 11 || 15 || 18)) {
+            //         anchoredTooltip(event, entries[t])
+            //     } else anchoredTooltip(event, currentCreateds);
+            // }
+            if (entries[t].matches('.page-entry:hover')) {
+                anchoredTooltip(event, createds[t]);
+            } else anchoredTooltip(event, entries[t]);
+        }
+    }, false);
+    entries[i].addEventListener('mouseleave', hideTooltip, false);
 }
-document.addEventListener("mousemove", infoTooltip);
+
+function anchoredTooltip(event, el) {
+    // console.log(el.getBoundingClientRect().left);
+    var x = el.getBoundingClientRect().left;
+    var y = event.clientY;
+    tooltip.style.left = x + 'px';
+    tooltip.style.top = y - 20 + 'px';
+    summonTooltip();
+}
+
+// function followTooltip(event) {
+//     var x = event.clientX;
+//     var y = event.clientY;
+//     tooltip.style.left = x + 'px';
+//     tooltip.style.top = y + 'px';
+// }
+// document.addEventListener('mousemove', function(event) {
+//     followTooltip(event);
+// }, false);
+
+function summonTooltip(text) {
+    for (t = 0; t < entries.length; t++) {
+        currentEntry = entries[t].childNodes;
+        if (entries[t].matches('.page-entry:hover')) {
+            text = entries[t].getElementsByTagName('text')[0].textContent + " page.<br>" + "Created: <br>" + entries[t].getAttribute("js-creation-date");
+            tooltip.innerHTML = text;
+            tooltip.classList.add('summon');
+        }
+    }
+}
+
+function hideTooltip() {
+    tooltip.classList.remove('summon');
+}

@@ -1,7 +1,7 @@
 ---
-title: Linea grafico Jay
+title: What are the topics in common between Hate&nbsp;Speech and Hate&nbsp;Crime?
 cover: /assets/images/covers/viz02.jpg
-number: 3
+number: 4
 ---
 ### Description
 
