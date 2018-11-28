@@ -1,318 +1,185 @@
+/* ---------    FONT SIZES   --------- */
+.font-size {
+    font-size: 10px;
+}
 
-    #nodata, #shutteddown, #online {
-        opacity: 0;
-        transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
-    }
+.font-size-2 {
+    font-size: 16px;
+}
 
-    #nodata.on, #shutteddown.on, #online.on {
-        opacity: 1;
-        transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
-    }
+.font-size-3 {
+    font-size: 12px;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
-    .divider {
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    }
+/* ---------    CIRCLES   --------- */
 
-    #online-box, #nodata-box, #shutteddown-box {
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    }
+.circles{
+    opacity: 1;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
-    .online-s{
-        fill:white;
-        stroke:#0000FF;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    }
-    
-    .nodata-s{
-        fill:white;
-        stroke:#7f7fff;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    }
-    
-    .shutteddown-s{
-        fill:white;
-        stroke:#CE3B19;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    }
-
-    #online-box.filled {
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-        fill:#0000FF;
-    }
-
-    #nodata-box.filled {
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-        fill: #7f7fff;
-    }
-
-    #shutteddown-box.filled{
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-        fill: #CE3B19;
-    }
-
-    #online-text, #nodata-text, #shutteddown-text {
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-        cursor: pointer;
-    }
-
-    #online-text.white, #nodata-text.white, #shutteddown-text.white {
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-        fill: white;
-    }
+.circles.off {
+    opacity: .3;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
 
-    /* ------------------------------------------- */
-    /* ----------- Classi mosaic chart ----------- */
-    /* ------------------------------------------- */
+.dest-circles {
+    fill: #0033FF;
+}
 
-    .direct, .referrals, .search, .social, .mail, .display {
-        opacity: .5;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
-        opacity .45s cubic-bezier(.65, 0, .15, 1);
-    }
+.hate-circles {
+    fill: #F78028;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
-    .direct-on, .referrals-on, .search-on, .social-on, .mail-on, .display-on {
-        opacity: 1;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
-        opacity .45s cubic-bezier(.65, 0, .15, 1);
-    }
+/* ---------    ARROWS   --------- */
 
-    .direct {
-        fill:white;
-        stroke:#0000FF;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        
-    }
+.arrows, .arrows.off {
+    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+}
 
-    .direct-on{
-        fill: #0000FF;
-        stroke:#0000FF;
-        
-    }
+.arrows{
+    opacity: 1;
+}
 
-    .direct-numbers {
-        fill: #0000FF;
-        
-    }
-    
-    .referrals{
-        fill:white;
-        stroke:#311AD4;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        
-    }
+.arrows.off {
+    opacity: .3;
+}
 
-    .referrals-on{
-        fill: #311AD4;
-        stroke:#311AD4;
-        
-    }
+.arrows.stroke-on {
+    stroke-width: 1 !important;
+}
 
-    .referrals-numbers {
-        fill:#311AD4;
-        
-    }
+.a-hatesites {
+    fill: none;
+    stroke: #F78028;
+    stroke-width: 0.35;
+}
 
-    .search {
-        fill:white;
-        stroke:#643F99;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        
-    }
+.a-dest, .a-dest-out {
+    fill: none;
+    stroke: #0033FF;
+    stroke-width: 0.35;
+}
 
-    .search-on{
-        fill: #643F99;
-        stroke:#643F99;
-        
-    }
+.a-ref, .a-ref-out {
+    fill: none;
+    stroke: #8FA5FF;
+    stroke-width: 0.35;
+}
 
-    .search-numbers {
-        fill:#643F99;
-        
-    }
+.a-ref-dest {
+    fill: none;
+    stroke: #650499;
+    stroke-width: 0.35;
+}
 
-    .social {
-        fill:white;
-        stroke:#944D7E;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        
-    }
+/* ---------    HIGHLIGHT   --------- */
 
-    .social-on{
-        fill: #944D7E;
-        stroke:#944D7E;
-        
-    }
+.hl-red {
+    fill: #CE3B19;
+    opacity: 0.75;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
+.toggle-on {
+    opacity: 0;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
-    .social-numbers {
-        fill: #944D7E;
-        
-    }
+.box-on {
+    fill: #0033FF;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
-    .mail {
-        fill:white;
-        stroke:#C76653;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        
-    }
+.toggle-box {
+    fill: #FFFFFF;
+    stroke: #0033FF;
+    stroke-width: 1.2577;
+    stroke-miterlimit: 10;
+}
 
-    .mail-on{
-        fill: #C76653;
-        stroke:#C76653;
-        
-    }
+.faded {
+    opacity: 0;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
 
-    .mail-numbers {
-        fill:#C76653;
-        
-    }
+/* ---------    CSS   --------- */
 
+.st0 {
+    fill: none;
+    stroke: #CCCCCC;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
 
-    .display {
-        fill:white;
-        stroke:#F78028;
-        stroke-width:1.5;
-        stroke-miterlimit:10;
-        
-    }
+.st1 {
+    fill: none;
+    stroke: #CCCCCC;
+    stroke-width: 0.75;
+    stroke-miterlimit: 10;
+}
 
-    .display-on {
-        fill:#F78028;
-        stroke:#F78028;
-        
-    }
+.st3 {
+    font-family: 'Mono Text';
+}
 
-    .numbers {
-        opacity: .5;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
-        opacity .6s cubic-bezier(.65, 0, .15, 1);
-    }
+.st5 {
+    fill: #8FA5FF;
+}
 
-    .numbers-on {
-        opacity: 1;
-        fill: white;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
-        opacity .6s cubic-bezier(.65, 0, .15, 1);
-    }
+.st6 {
+    fill: #650499;
+}
+
+.st7 {
+    fill: #CCCCCC;
+}
+
+.st8 {
+    opacity: 0.8;
+}
+
+.st9 {
+    fill: #CE3B19;
+}
+
+.st10 {
+    fill: none;
+}
+
+.st11 {
+    enable-background: new;
+}
+
+.st12 {
+    letter-spacing: 6;
+}
+
+.st13 {
+    font-family: 'Mono Medium';
+}
+
+.st14 {
+    font-size: 14px;
+}
+
+.st17 {
+    font-family: 'Mono Light';
+}
+
+.st19 {
+    /* ref-dest */
+}
+
+.st21 {
+/* destout */
+}
 
 
 
-    .display-box, .mail-box, .social-box, .search-box, .referrals-box, .direct-box {
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
-                    stroke .6s cubic-bezier(.65, 0, .15, 1);
-        }
-    .box-on {
-        stroke:white;
-        transition: fill .6s cubic-bezier(.65, 0, .15, 1),
-                    stroke .6s cubic-bezier(.65, 0, .15, 1);
-    }
-
-    .graph-component {
-        cursor: pointer;
-    }
-
-
-	.st0{fill:#8C8D99;}
-	.st1{font-family:'Mono Text';font-size:19px;}
-	.st2{font-size:12px;}
-	.st3{clip-path:url(#SVGID_2_);fill:none;stroke:#0000FF;stroke-width:0.7823;stroke-miterlimit:10;}
-    .st4{font-family:'Mono Medium'; font-size:19px;}
-    .sto{font-family:'Mono Medium'; font-size:12px;}
-    
-	.st5{fill:#0000FF;stroke:#FFFFFF;stroke-width:1.5646;stroke-miterlimit:10;}
-	.st6{fill:none;stroke:#0000FF;stroke-width:0.7823;stroke-miterlimit:10;stroke-dasharray:3.1292;}
-	.st7{fill:none;stroke:#8C8D99;stroke-width:0.5;stroke-miterlimit:10;}
-	.st8{fill:none;stroke:#8C8D99;stroke-width:0.3912;stroke-miterlimit:10;}
-    
-    .st9{fill:#F78028;stroke:#FFFFFF;stroke-width:1.5646;stroke-miterlimit:10;}
-	.st10{fill:#C66653;stroke:#FFFFFF;stroke-width:1.5646;stroke-miterlimit:10;}
-	.st11{fill:#944D7E;stroke:#FFFFFF;stroke-width:1.5646;stroke-miterlimit:10;}
-	.st12{fill:#6333A9;stroke:#FFFFFF;stroke-width:1.5646;stroke-miterlimit:10;}
-    .st13{fill:#311AD4;stroke:#FFFFFF;stroke-width:1.5646;stroke-miterlimit:10;}
-    
-    .st14{fill:none;stroke:#0000FF;stroke-width:1.5;stroke-miterlimit:10;}
-	.st15{fill:#191919;}
-    .st17{fill:#CCCCCC;}
-    
-	.st18{clip-path:url(#SVGID_4_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st19{clip-path:url(#SVGID_6_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st20{clip-path:url(#SVGID_8_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st21{clip-path:url(#SVGID_10_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st22{clip-path:url(#SVGID_12_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st23{clip-path:url(#SVGID_14_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st24{clip-path:url(#SVGID_16_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st25{clip-path:url(#SVGID_18_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st26{clip-path:url(#SVGID_20_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st27{clip-path:url(#SVGID_22_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st28{clip-path:url(#SVGID_24_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st29{clip-path:url(#SVGID_26_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st30{clip-path:url(#SVGID_28_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st31{clip-path:url(#SVGID_30_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st32{clip-path:url(#SVGID_32_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st33{clip-path:url(#SVGID_34_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st34{clip-path:url(#SVGID_36_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st35{clip-path:url(#SVGID_38_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st36{clip-path:url(#SVGID_40_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st37{clip-path:url(#SVGID_42_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st38{clip-path:url(#SVGID_44_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st39{clip-path:url(#SVGID_46_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st40{clip-path:url(#SVGID_48_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st41{clip-path:url(#SVGID_50_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st42{clip-path:url(#SVGID_52_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st43{clip-path:url(#SVGID_54_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-	.st44{clip-path:url(#SVGID_56_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-    .st45{clip-path:url(#SVGID_58_);fill:none;stroke:#CE3B19;stroke-width:1.42;stroke-miterlimit:10;}
-    
-    /* .st46{opacity:0.5;} */
-    .st460 {
-        stroke:#7f7fff;
-    }
-	.st47{clip-path:url(#SVGID_60_);fill:none;stroke:#7f7fff;stroke-width:1.42;stroke-miterlimit:10;}
-    .st48{clip-path:url(#SVGID_62_);fill:none;stroke:#7f7fff;stroke-width:1.42;stroke-miterlimit:10;}
-    .st490{fill:#7f7fff}
-	.st49{fill:#0000FF;}
-	.st50{fill:#FFFFFF;}
-    .st51{font-size:18px;}
-
-    .st520{fill:none;stroke:#0000FF;stroke-width:1.5;stroke-miterlimit:10;}
-    .st52{fill:none;stroke:#7f7fff;stroke-width:1.5;stroke-miterlimit:10;}
-    
-	.st53{fill:none;stroke:#CE3B19;stroke-width:1.5;stroke-miterlimit:10;}
-    .st54{fill:#CE3B19;}
-
-    /* Font dei numeri */
-	.st56{font-size:19.6896px;}
-    .st57{font-size:13.7228px;}
-
-	.st60{fill:none;stroke:#7f7fff;stroke-width:3;stroke-miterlimit:10;}
-    .st61{fill:none;stroke:#7f7fff;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:3.8376,3.8376;}
-    
-	.st62{fill:none;stroke:#643F99;stroke-width:1.5;stroke-miterlimit:10;}
-	.st63{fill:#6333A9;}
-	.st64{fill:none;stroke:#6333A9;stroke-width:3;stroke-miterlimit:10;}
-	.st65{fill:none;stroke:#6333A9;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:3.8376,3.8376;}
-	.st67{fill:none;stroke:#944D7E;stroke-width:1.5;stroke-miterlimit:10;}
-	
-	.st69{fill:none;stroke:#944D7E;stroke-width:3;stroke-miterlimit:10;}
-	.st70{fill:none;stroke:#944D7E;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:3.8376,3.8376;}
-	.st71{fill:none;stroke:#C76653;stroke-width:1.5;stroke-miterlimit:10;}
-	.st72{fill:#C66653;}
-	.st73{fill:none;stroke:#C66653;stroke-width:3;stroke-miterlimit:10;}
-	.st74{fill:none;stroke:#C66653;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:3.8376,3.8376;}
-	.st75{fill:#C76653;}
-	.st76{fill:#F78028;}
-	.st77{fill:none;stroke:#F78028;stroke-width:3;stroke-miterlimit:10;}
-	.st78{fill:none;stroke:#F78028;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:3.8376,3.8376;}
-	.st79{fill:none;stroke:#F78028;stroke-width:1.5;stroke-miterlimit:10;}
+/* ------------------------------------------- */
+/* -----------       TOGGLES       ----------- */
+/* ------------------------------------------- */
