@@ -122,3 +122,9 @@ $(document).ready((function(){
     })
   })
 );
+
+
+// 
+// Toggle categorie sopra-a
+// 
+
