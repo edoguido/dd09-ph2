@@ -6,7 +6,7 @@ number: 7
 
 ### Description 
 
-After seeing which categories belong to the 49 hate sites found on [RationalWiki](https://rationalwiki.org/wiki/Category:Internet_hate_sites), which are their main topics, and how they define themselves, we finally focused on the user who visits them.
+After seeing which categories belong to the 48 hate sites found on [RationalWiki](https://rationalwiki.org/wiki/Category:Internet_hate_sites), which are their main topics, and how they define themselves, we finally focused on the user who visits them.
 The intent was to investigate how effectively the user reaches these sites, since we observed a great lack of homogeneity of the rankings proposed by Alexa.
 
 Through [SimilarWeb](https://www.similarweb.com/) we were able to trace the global ranking of sites, and the main sources of traffic in October 2018. 
