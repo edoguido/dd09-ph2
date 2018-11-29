@@ -3,12 +3,12 @@
 <svg class="main-viz" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
     y="0px" viewBox="0 0 1690 1215" style="enable-background:new 0 0 1690 1215;" xml:space="preserve">
     <style type="text/css">
-        #cursor, #tag, #label {
+        #cursor, #tag, #tag-label, #tag2, #tag-label2 {
             pointer-events: none;
             opacity: 0;
             transition: opacity .25s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
-        #cursor.show, #tag.show, #label.show {
+        #cursor.show, #tag.show, #tag-label.show, #tag2.show, #tag-label2.show {
             opacity: 1;
             transition: opacity .25s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
@@ -331,7 +331,7 @@
                         <rect x="660.32" y="795.05" class="st8" width="261.37" height="52.21" />
                     </g>
                 </g>
-                <polyline class="line st20" points="91.22,1043.49 126.77,1055.57 162.18,1037.98 197.91,1034.68 233.47,988.48 269.03,1003.7 
+                <polyline id="us-path" data-min="18864" data-max="82986" class="line st20" points="91.22,1043.49 126.77,1055.57 162.18,1037.98 197.91,1034.68 233.47,988.48 269.03,1003.7 
 			304.59,1019.82 340.15,1019.62 375.71,999.56 411.27,1027.36 446.84,1016.33 482.4,981.84 517.96,1027.33 553.52,1037.73 
 			589.08,1027.36 624.64,1015.16 660.2,966.78 695.76,1008.22 731.33,1005.64 766.89,948.5 802.45,986.62 838.01,983.52 
 			873.57,963.02 909.13,995.72 944.69,1021.99 980.26,714.9 1015.82,933.53 1051.38,956.05 1086.94,974.87 1119.86,1006.32 
@@ -399,7 +399,7 @@
                 </g>
                 <text transform="matrix(1 0 0 1 1499.9277 1039.5128)" class="st21 st13 st16 line-label">Japanese -
                     922.965</text>
-                <polyline class="line st22" points="91.22,1036.56 126.77,1011.85 162.18,1052.82 197.58,1051.71 232.99,1051.71 269.03,1035.02 
+                <polyline id="japan-path" data-min="7482" data-max="175000" class="line st22" points="91.22,1036.56 126.77,1011.85 162.18,1052.82 197.58,1051.71 232.99,1051.71 269.03,1035.02 
 			304.59,817.42 339.21,1056.3 375.71,826.41 410.02,945.53 446.84,830.14 482.4,257.73 517.96,977.43 553.52,1059.16 
 			589.08,1078.94 624.64,1083.33 660.2,1067.64 695.76,1078.65 731.33,1079.41 766.89,1070 802.68,1073.43 838.01,1092.25 
 			873.57,1037.01 909.13,1053.52 944.69,1064.62 980.26,1088.59 1015.82,1055.02 1051.38,1084.94 1086.94,1082.42 1119.86,1088.59 
@@ -733,4 +733,5 @@
     </g>
 </svg>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="{{ '/assets/js/viz03.js' | relative_url }}" charset="utf-8"></script>
