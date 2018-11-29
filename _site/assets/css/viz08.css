@@ -8,7 +8,50 @@
 }
 
 .font-size-3 {
-    font-size: 10px;
+    font-size: 12px;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
+
+.testi-seed {
+    font-size: 14px;
+}
+
+/* Testi in */
+.testi-viola, .testi-azzurri, .testi-blu {
+    font-size: 14px;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+    font-family: 'Mono Text';
+}
+
+.testi-viola {
+    fill: #650499;
+}
+
+.testi-blu {
+    fill: #0033FF;
+}
+
+.testi-azzurri {
+    fill: #8FA5FF;
+}
+
+.st17 {
+    font-family: 'Mono Text';
+}
+
+/* ---------     TEXTS    --------- */
+.text-ref-out{
+    opacity: 0;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
+
+.text-dest-out{
+    opacity: 0;
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
+
+.text-on {
+    opacity: 1 !important;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
@@ -49,7 +92,7 @@
 }
 
 .arrows.stroke-on {
-    stroke-width: 1 !important;
+    stroke-width: 1.5 !important;
 }
 
 .a-hatesites {
@@ -101,8 +144,9 @@
     stroke-miterlimit: 10;
 }
 
+/* la classe fade ha gli elementi a cui assegnare faded */
 .faded {
-    opacity: 0;
+    opacity: 0.2;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
@@ -166,9 +210,7 @@
     font-size: 14px;
 }
 
-.st17 {
-    font-family: 'Mono Light';
-}
+
 
 .st19 {
     /* ref-dest */

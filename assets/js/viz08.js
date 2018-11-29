@@ -25,6 +25,7 @@ for (i = 0; i < circles.length; i++) {
     circles[i].addEventListener('mouseout', highlightOff, false);
 }
 
+
 //------
 //------ FUNCTIONS HIGHLIGHTACOS
 //------
@@ -52,6 +53,25 @@ function highlightOff() {
         arrows[i].classList.remove("stroke-on");
     }
 }
+
+//------ Higlight testi out
+$(document).ready((function(){
+    $('.c-ref-out').hover(function() {
+      $('.text-ref-out').toggleClass('text-on');
+    }, function() {
+        $('.text-ref-out').toggleClass('text-on');
+    })
+  })
+);
+
+$(document).ready((function(){
+    $('.c-dest-out').hover(function() {
+      $('.text-dest-out').toggleClass('text-on');
+    }, function() {
+        $('.text-dest-out').toggleClass('text-on');
+    })
+  })
+);
 
 //------
 //------ TOGGLE
