@@ -102,6 +102,7 @@ function updateCursor(e, el) {
     var gridTop = grid.getBoundingClientRect().top;
     var gridBottom = grid.getBoundingClientRect().bottom;
 
+
     if (x > gridLeft && x < gridRight && y > gridTop && y < gridBottom) {
         el.classList.add('show');
     } else {
@@ -156,10 +157,10 @@ function updateLabelValue(coordX, el, labelid) {
     // console.log(minY + " " + maxY);
 
     for (i = 0; i < points.length; i++) {
-        if (coordX > points[i].x && points[i] == points[points.length-1]) {
+        if (coordX > points[i].x && points[i] == points[points.length - 1]) {
             return;
-        } else if (coordX > points[i].x && coordX < points[i+1].x) {
-            graphValue = points[i+1].y;
+        } else if (coordX > points[i].x && coordX < points[i + 1].x) {
+            graphValue = points[i + 1].y;
             graphValue = scale(graphValue, minY, maxY, parseFloat(dataMax), parseFloat(dataMin));
             document.getElementById(labelid).innerHTML = Math.floor(graphValue);
         }
