@@ -39,12 +39,6 @@ var context = document.getElementById('svg-box');
 var svg = document.getElementsByTagName('svg')[0];
 var svgHeight;
 
-function setAttributes(svgEl, attributes, values) {
-    for (i = 0; i < attributes.length; i++) {
-        svgEl.setAttribute(attributes[i], values[i]);
-    }
-}
-
 function showCursor() {
     cursor = document.createElementNS("http://www.w3.org/2000/svg", "line");
     var lineAttributes = ['id', 'x1', 'y1', 'x2', 'y2', 'stroke'];
@@ -55,23 +49,43 @@ function showCursor() {
     var tagAttributes = ['id', 'x', 'y', 'width', 'height', 'fill'];
     var tagValues = ['tag', 0, 0, 120, 72, 'blue'];
     setAttributes(cursorTag, tagAttributes, tagValues);
-    
+
     cursorLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
     var labelAttributes = ['id', 'x', 'y', 'fill'];
     var labelValues = ['tag-label', '50', '50', 'white'];
     cursorLabel.innerHTML = '0';
     setAttributes(cursorLabel, labelAttributes, labelValues);
 
+    cursorTag2 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    var tagAttributes2 = ['id', 'x', 'y', 'width', 'height', 'fill'];
+    var tagValues2 = ['tag2', 0, 0, 120, 72, 'orange'];
+    setAttributes(cursorTag2, tagAttributes2, tagValues2);
+
+    cursorLabel2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    var labelAttributes2 = ['id', 'x', 'y', 'fill'];
+    var labelValues2 = ['tag-label2', '50', '50', 'white'];
+    cursorLabel2.innerHTML = '0';
+    setAttributes(cursorLabel2, labelAttributes2, labelValues2);
+
     document.getElementsByTagName('svg')[0].appendChild(cursor);
     document.getElementsByTagName('svg')[0].appendChild(cursorTag);
     document.getElementsByTagName('svg')[0].appendChild(cursorLabel);
+    document.getElementsByTagName('svg')[0].appendChild(cursorTag2);
+    document.getElementsByTagName('svg')[0].appendChild(cursorLabel2);
+}
 
+function setAttributes(svgEl, attributes, values) {
+    for (i = 0; i < attributes.length; i++) {
+        svgEl.setAttribute(attributes[i], values[i]);
+    }
 }
 
 document.addEventListener('mousemove', function () {
     updateCursor(event, cursor);
     updateCursor(event, cursorTag);
     updateCursor(event, cursorLabel);
+    updateCursor(event, cursorTag2);
+    updateCursor(event, cursorLabel2);
 }, false);
 
 function updateCursor(e, el) {
@@ -85,8 +99,10 @@ function updateCursor(e, el) {
     var grid = document.getElementById('griglia');
     var gridLeft = grid.getBoundingClientRect().left;
     var gridRight = grid.getBoundingClientRect().right;
+    var gridTop = grid.getBoundingClientRect().top;
+    var gridBottom = grid.getBoundingClientRect().bottom;
 
-    if (gridLeft < x && x < gridRight) {
+    if (x > gridLeft && x < gridRight && y > gridTop && y < gridBottom) {
         el.classList.add('show');
     } else {
         el.classList.remove('show');
@@ -103,6 +119,14 @@ function updateCursor(e, el) {
     var newAttributesLabel = ['x', 'y'];
     var newValuesLabel = [svgCoord.x - (cursorLabel.clientWidth / 2), mouseCoordSvg.y - cursorLabel.clientHeight * 2];
 
+    var newAttributesTag2 = ['x', 'y'];
+    var newXTag2 = mouseCoordSvg.x - cursorTag.getAttribute('width') / 2;
+    var newYTag2 = mouseCoordSvg.y - cursorTag.getAttribute('height') - 96;
+    var newValuesTag2 = [newXTag2, newYTag2];
+
+    var newAttributesLabel2 = ['x', 'y'];
+    var newValuesLabel2 = [svgCoord.x - (cursorLabel2.clientWidth / 2), mouseCoordSvg.y - 84 - cursorLabel2.clientHeight * 2];
+
     for (i = 0; i < newAttributes.length; i++) {
         setAttributes(cursor, newAttributes, newValues);
     }
@@ -112,13 +136,66 @@ function updateCursor(e, el) {
     for (i = 0; i < newAttributesLabel.length; i++) {
         setAttributes(cursorLabel, newAttributesLabel, newValuesLabel);
     }
+    for (i = 0; i < newAttributesTag2.length; i++) {
+        setAttributes(cursorTag2, newAttributesTag2, newValuesTag2);
+    }
+    for (i = 0; i < newAttributesLabel2.length; i++) {
+        setAttributes(cursorLabel2, newAttributesLabel2, newValuesLabel2);
+    }
+    updateLabelValue(svgCoord.x, 'japan-path', 'tag-label');
+    updateLabelValue(svgCoord.x, 'us-path', 'tag-label2');
 }
 
-function updateLabelValue() {
-    
+function updateLabelValue(coordX, el, labelid) {
+    var points = calculateSvgPath(el);
+    var Ys = getYs(points);
+    var minY = calculateGraphValues(Ys).min;
+    var maxY = calculateGraphValues(Ys).max;
+    var dataMin = document.getElementById(el).getAttribute('data-min');
+    var dataMax = document.getElementById(el).getAttribute('data-max');
+    // console.log(minY + " " + maxY);
+
+    for (i = 0; i < points.length; i++) {
+        if (coordX > points[i].x && points[i] == points[points.length-1]) {
+            return;
+        } else if (coordX > points[i].x && coordX < points[i+1].x) {
+            graphValue = points[i+1].y;
+            graphValue = scale(graphValue, minY, maxY, parseFloat(dataMax), parseFloat(dataMin));
+            document.getElementById(labelid).innerHTML = Math.floor(graphValue);
+        }
+    }
 }
 
-// still not used
+function calculateSvgPath(el) {
+    path = document.getElementById(el);
+    pointsList = path.points;
+    pointsArray = [];
+    for (i = 0; i < pointsList.numberOfItems; i++) {
+        pointsArray.push(pointsList.getItem(i));
+    }
+    return pointsArray;
+}
+
+function calculateGraphValues(points) {
+    var minY = Math.min.apply(null, points);
+    var maxY = Math.max.apply(null, points);
+    // console.log(minY + " " + maxY);
+    return {
+        min: minY,
+        max: maxY
+    };
+}
+
+function getYs(pointsArray) {
+    coordsArray = [];
+    for (i = 0; i < pointsArray.length; i++) {
+        coordsArray.push(pointsArray[i].y);
+    }
+    // console.log(coordsArray);
+    return coordsArray;
+}
+
+// mapping a number from range [in_min, in_max] to range [out_min, out_max]
 function scale(num, in_min, in_max, out_min, out_max) {
     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
