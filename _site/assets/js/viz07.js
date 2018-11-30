@@ -13,6 +13,8 @@ var shutteddownRect = document.getElementById("shutteddown-box")
 
 var divider = document.getElementById("rect-divider");
 
+var cat = document.getElementById("cat");
+
 // Onload
 window.onload = onlineGraph.classList.add("on"),
                 onlineText.classList.add("white"),
@@ -27,10 +29,11 @@ for (i = 0; i < buttons.length; i++) {
 
 // Funzioni
 function highlightButton() {
-    console.log("click");
     onlineGraph.classList.remove("on");
     nodataGraph.classList.remove("on");
     shutteddownGraph.classList.remove("on");
+
+    cat.classList.remove("faded");
 
     onlineRect.classList.remove("filled");
     nodataRect.classList.remove("filled");
@@ -40,25 +43,32 @@ function highlightButton() {
     nodataText.classList.remove("white");
     shutteddownText.classList.remove("white");
 
+    divider.classList.remove("online");
+    divider.classList.remove("nodata");
+    divider.classList.remove("shutteddown");
+
+
     if (this.classList.contains('online')) {
         onlineGraph.classList.add("on");
         onlineRect.classList.add("filled");
-        divider.style.fill = "#0000FF";
         onlineText.classList.add("white");
+        divider.classList.add("online");
     }
 
     if (this.classList.contains('nodata')) {
         nodataGraph.classList.add("on");
         nodataRect.classList.add("filled");
-        divider.style.fill = "#7f7fff";
         nodataText.classList.add("white");
+        divider.classList.add("nodata");
+        cat.classList.add("faded");
     }
 
     if (this.classList.contains('shutteddown')) {
         shutteddownGraph.classList.add("on");
         shutteddownRect.classList.add("filled");
-        divider.style.fill = "CE3B19";
         shutteddownText.classList.add("white");
+        divider.classList.add("shutteddown");
+        cat.classList.add("faded");
     }
 }   
 
@@ -66,8 +76,10 @@ function highlightButton() {
 /* -----------       TOGGLES       ----------- */
 /* ------------------------------------------- */
 
+
+
 $(document).ready(function(){
-    $("#direct").click(function(){
+    $(".direct, .direct-numbers").click(function(){
         $(".direct").toggleClass("direct-on");
         $(".direct-numbers").toggleClass("numbers-on");
         $(".direct-box").toggleClass("box-on");
@@ -75,7 +87,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $("#referrals").click(function(){
+    $(".referrals, .referrals-numbers").click(function(){
         $(".referrals").toggleClass("referrals-on");
         $(".referrals-numbers").toggleClass("numbers-on");
         $(".referrals-box").toggleClass("box-on");
@@ -83,7 +95,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $("#search").click(function(){
+    $(".search, .search-numbers").click(function(){
         $(".search").toggleClass("search-on");
         $(".search-numbers").toggleClass("numbers-on");
         $(".search-box").toggleClass("box-on");
@@ -91,7 +103,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $("#social").click(function(){
+    $(".social, .social-numbers").click(function(){
         $(".social").toggleClass("social-on");
         $(".social-numbers").toggleClass("numbers-on");
         $(".social-box").toggleClass("box-on");
@@ -99,7 +111,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $("#mail").click(function(){
+    $(".mail, .mail-numbers").click(function(){
         $(".mail").toggleClass("mail-on");
         $(".mail-numbers").toggleClass("numbers-on");
         $(".mail-box").toggleClass("box-on");
@@ -107,7 +119,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $("#display").click(function(){
+    $(".display, .display-numbers").click(function(){
         $(".display").toggleClass("display-on");
         $(".display-numbers").toggleClass("numbers-on");
         $(".display-box").toggleClass("box-on");
