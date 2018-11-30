@@ -1,13 +1,59 @@
 /* 
-Classi
+CLASSI PER LE CATEGORIE
 cat-dx  Categorie a destra
 cat-up  Categorie in alto (gruppi)
 cat-sx  Categorie a sinistra (lista)
-
-
-
 */
 
+
+/* ---- Colori ---- */
+.st49{fill:#0033FF;}
+.st45{fill:#150FAA;}
+.st46{fill:#8FA5FF;}
+.st47{fill:#DAA1FF;}
+.st39{fill:#650499;}
+.st50{fill:#CE3B19;}
+.st48{fill:#F78028;}
+.st40{fill:#F2C005;}
+
+
+/* ---- Toggle Sopra Box ---- */
+.anim {
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1),
+                opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
+
+.white-text {
+    fill: white !important;
+}
+
+.blu-rect{stroke:#0033FF; fill:white; stroke-width:1}
+.blu-rect-on{stroke:#0033FF; fill:#0033FF; stroke-width:1}
+
+.d-blu-rect{stroke:#150FAA; fill:white; stroke-width:1}
+.d-blu-rect-on{stroke:#150FAA; fill:#150FAA; stroke-width:1}
+
+.azzurro-rect{stroke:#8FA5FF; fill:white; stroke-width:1}
+.azzurro-rect-on{stroke:#8FA5FF; fill:#8FA5FF; stroke-width:1}
+
+.rosa-rect{stroke:#DAA1FF; fill:white; stroke-width:1}
+.rosa-rect-on{stroke:#DAA1FF; fill:#DAA1FF; stroke-width:1}
+
+.viola-rect{stroke:#650499; fill:white; stroke-width:1}
+.viola-rect-on{stroke:#650499; fill:#650499; stroke-width:1}
+
+.rosso-rect{stroke:#CE3B19; fill:white; stroke-width:1}
+.rosso-rect-on{stroke:#CE3B19; fill:#CE3B19; stroke-width:1}
+
+.arancio-rect{stroke:#F78028; fill:white; stroke-width:1}
+.arancio-rect-on{stroke:#F78028; fill:#F78028; stroke-width:1}
+
+.giallo-rect{stroke:#F2C005; fill:white; stroke-width:1}
+.giallo-rect-on{stroke:#F2C005; fill:#F2C005; stroke-width:1}
+
+
+
+/* ---- css ---- */
 .off{
     opacity: 0.2 !important;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
@@ -29,8 +75,6 @@ cat-sx  Categorie a sinistra (lista)
 
 .font-light{font-family:'Mono Light';}
 .font-size-3{font-size:13.5px;}
-
-/* --- CATEGORIE SOPRA --- */
 
 .st0{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;}
 .st1{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9879,3.9879;}
@@ -71,18 +115,10 @@ cat-sx  Categorie a sinistra (lista)
 .st36{fill:#F2C005;fill-opacity:0.9;}
 .st37{fill:#F78028;fill-opacity:0.9;}
 .st38{fill:#0033FF;fill-opacity:0.9;}
-.st39{fill:#650499;}
-.st40{fill:#F2C005;}
 .st41{fill:#1D1D1B;}
+.st51{fill:#CCCCCC;}
 
 .st44{fill:none;stroke:#DAA1FF;stroke-width:0.25;stroke-miterlimit:10;}
-.st45{fill:#150FAA;}
-.st46{fill:#8FA5FF;}
-.st47{fill:#DAA1FF;}
-.st48{fill:#F78028;}
-.st49{fill:#0033FF;}
-.st50{fill:#CE3B19;}
-.st51{fill:#CCCCCC;}
 
 .st55{fill:none;stroke:#1D1D1B;stroke-width:0.75;stroke-miterlimit:10;}
 .st56{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}

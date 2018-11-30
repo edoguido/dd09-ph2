@@ -96,20 +96,20 @@ $(document).ready((function(){
 //------ TOGGLE
 //------
 
-$(document).ready(function(){
-    $("#toggle-button").mouseenter(function(){
-        $(".hl-red").toggleClass("toggle-on"),
-        $(".fade").toggleClass("faded");
-        $(".toggle-box").toggleClass("box-on");
-    });
-});
+// $(document).ready(function(){
+//     $("#toggle-button").mouseenter(function(){
+//         $(".hl-red").toggleClass("toggle-on"),
+//         $(".fade").toggleClass("faded");
+//         $(".toggle-box").toggleClass("box-on");
+//     });
+// });
 
-$(document).ready(function(){
-    $("#toggle-button").mouseleave(function(){
-        $(".hl-red").toggleClass("toggle-on"),
-        $(".fade").toggleClass("faded");
-    });
-});
+// $(document).ready(function(){
+//     $("#toggle-button").mouseleave(function(){
+//         $(".hl-red").toggleClass("toggle-on"),
+//         $(".fade").toggleClass("faded");
+//     });
+// });
 
 $(document).ready(function(){
     $(".b-toggle").click(function(){
