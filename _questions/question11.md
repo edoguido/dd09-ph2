@@ -1,5 +1,5 @@
 ---
-title: 5.1 How does the discussion about Hate Speech & Filtering develop on the web?
+title: 4 How does the discussion about Hate Speech & Filtering develop on the web?
 cover: /assets/images/covers/viz02.jpg
 number: 11
 ---

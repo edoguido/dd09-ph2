@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>2.2 Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?</title>
+    <title>2.2 - Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?</title>
 
     <!-- Meta tags for social networks -->
-    <meta property="og:title" content="2.2 Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?">
+    <meta property="og:title" content="2.2 - Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?">
     <meta property="og:description" content="Short description of the document for the meta tags (limit to 150 characters, longer will be cut by search engines)">
     <meta property="og:image" content="http://localhost:4000/assets/images/covers/viz02.jpg">
     <meta property="og:url" content="http://localhost:4000/question03">
@@ -59,35 +59,35 @@
             <ul class="index__list">
                 
                 <li class="index__item">
-                    <a href="/question01"> 1 What do users find when they search “Hate Speech” on Google? </a>
+                    <a href="/question01"> 1 – What do users find when they search “Hate Speech” on Google? </a>
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question02"> 2.1 How much did the definition of Hate Speech on Wikipedia change over time? </a>
+                    <a href="/question02"> 2.1 – How much did the definition of Hate Speech on Wikipedia change over time? </a>
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question03"> 2.2 Which events may have caused peaks of views on the Wikipedia pages of Hate Speech? </a>
+                    <a href="/question03"> 2.2 - Which events may have caused peaks of views on the Wikipedia pages of Hate Speech? </a>
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question04"> 2.3 What are the topics in common between Hate Speech and Hate Crime? </a>
+                    <a href="/question04"> 2.3 – What are the topics in common between Hate Speech and Hate Crime? </a>
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question05"> 3.1 Which are the characteristics of the sites being accused to spread hate? </a>
+                    <a href="/question05"> 3.1 – Which are the characteristics of the sites being accused to spread hate? </a>
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question07"> 3.3 How does the user reach hate sites? </a>
+                    <a href="/question07"> 3.3 – How does the user reach hate sites? </a>
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question08"> 3.4 Is it possible to identify a Hate Echo Chamber? </a>
+                    <a href="/question08"> 3.4 – Is it possible to identify a Hate Echo Chamber? </a>
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question11"> 5.1 How does the discussion about Hate Speech & Filtering develop on the web? </a>
+                    <a href="/question11"> 4 How does the discussion about Hate Speech & Filtering develop on the web? </a>
                 </li>
                 
             </ul>
@@ -105,7 +105,7 @@
         <a href="/question02" class="pagination pagination__prev"><span class="pagination__arrow">&larr;</span><span class="pagination__link">prev</span></a>
         <a href="/question04" class="pagination pagination__next"><span class="pagination__link">next</span><span class="pagination__arrow">&rarr;</span></a>
         <h4 class="question__subtitle">research question</h4>
-        <h2 class="question__title">2.2 Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?</h2>
+        <h2 class="question__title">2.2 - Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?</h2>
         <div class="btn--burger" role="button" tabindex="0" aria-pressed="false">
             <div class="btn--burger__line"></div>
             <div class="btn--burger__line"></div>
@@ -122,24 +122,46 @@
     <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg class="main-viz" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-    y="0px" viewBox="0 0 1690 1215" style="enable-background:new 0 0 1690 1215;" xml:space="preserve">
+    y="0px" viewBox="0 -40 1690 1215" style="enable-background:new 0 -40 1690 1215; max-height: 100vh; margin: 64px 0px;"
+    xml:space="preserve">
     <style type="text/css">
-        #cursor, #tag, #tag-label, #tag2, #tag-label2 {
+        #cursor,
+        #tag,
+        #tag-label,
+        #tag2,
+        #tag-label2,
+        #tag-caption {
             pointer-events: none;
             opacity: 0;
+            text-anchor: middle;
             transition: opacity .25s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
-        #cursor.show, #tag.show, #tag-label.show, #tag2.show, #tag-label2.show {
+
+        #cursor.show,
+        #tag.show,
+        #tag-label.show,
+        #tag2.show,
+        #tag-label2.show,
+        #tag-caption.show {
             opacity: 1;
             transition: opacity .25s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .line-graph {
+            transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
         .line-graph.faded {
             opacity: .15;
         }
 
-        .line-graph {
-            transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        .hover-popup * {
+            cursor: default;
+        }
+
+        .line-label {
+            text-decoration: underline;
+            cursor: default;
         }
 
         .st0 {
@@ -159,10 +181,10 @@
 
         .st2 {
             fill: none;
-            stroke: #CCCCCC;
-            stroke-width: 0.5;
+            stroke: black;
+            stroke-width: 1.75;
             stroke-miterlimit: 10;
-            stroke-dasharray: 3.9994, 3.9994;
+            stroke-dasharray: 4, 4;
         }
 
         .st3 {
@@ -175,6 +197,10 @@
 
         .st5 {
             fill: #F78028;
+        }
+
+        .grey-fill {
+            fill: #CCCCCC;
         }
 
         .st6 {
@@ -218,7 +244,7 @@
         }
 
         .st16 {
-            font-size: 12px;
+            font-size: 18px;
         }
 
         .st17 {
@@ -228,12 +254,12 @@
         }
 
         .st18 {
-            fill: #999999;
+            fill: #9953DD;
         }
 
         .st19 {
             fill: none;
-            stroke: #999999;
+            stroke: #9953DD;
             stroke-width: 2;
             stroke-miterlimit: 10;
         }
@@ -266,11 +292,11 @@
         }
 
         .st25 {
-            font-family: 'Mono SemiBold';
+            font-family: 'Mono Regular';
         }
 
         .st26 {
-            font-size: 14px;
+            font-size: 16px;
         }
     </style>
     <g id="svg-box">
@@ -386,15 +412,15 @@
         <g id="events">
             <text transform="matrix(0.8192 -0.5736 0.5736 0.8192 900.1416 110.032)">
                 <tspan x="0" y="0" class="st15 st16" style="text-decoration: underline;">June 30, 2017</tspan>
-                <tspan x="0" y="14.4" class="st13 st16">Germany, “NetzDG”</tspan>
+                <tspan x="0" y="22" class="st13 st16">Germany, “NetzDG”</tspan>
             </text>
             <text transform="matrix(0.8192 -0.5736 0.5736 0.8192 463.3967 123.3562)">
                 <tspan x="0" y="0" class="st15 st16" style="text-decoration: underline;">May 30, 2016</tspan>
-                <tspan x="0" y="14.4" class="st13 st16">E.U. “Code of Conduct”</tspan>
+                <tspan x="0" y="22" class="st13 st16">E.U. “Code of Conduct”</tspan>
             </text>
-            <text transform="matrix(0.8192 -0.5736 0.5736 0.8192 419.5479 109.9212)">
+            <text transform="matrix(0.8192 -0.5736 0.5736 0.8192 409.5479 99.9212)">
                 <tspan x="0" y="0" class="st15 st16" style="text-decoration: underline;">May 25, 2016</tspan>
-                <tspan x="0" y="14.4" class="st13 st16">Japan “Hate Speech Act”</tspan>
+                <tspan x="0" y="22" class="st13 st16">Japan “Hate Speech Act”</tspan>
             </text>
         </g>
         <g id="cursor_laws">
@@ -402,34 +428,36 @@
                 <line class="st17" x1="439.84" y1="1129.27" x2="439.84" y2="149.57" />
                 <g>
                     <polygon class="st3" points="432.17,135 448.43,135 440,147.2 			" />
-                    <path class="st18" d="M446.52,136l-6.49,9.39L434,136H446.52 M450.33,134h-20l9.63,15L450.33,134L450.33,134z" />
+                    <path class="st4" d="M446.52,136l-6.49,9.39L434,136H446.52 M450.33,134h-20l9.63,15L450.33,134L450.33,134z" />
                 </g>
             </g>
             <g id="cursor_eu_cod">
                 <line class="st17" x1="446.84" y1="1129.27" x2="446.84" y2="149.57" />
                 <g>
                     <polygon class="st3" points="439.17,135 455.43,135 447,147.2 			" />
-                    <path class="st18" d="M453.52,136l-6.49,9.39L441,136H453.52 M457.33,134h-20l9.63,15L457.33,134L457.33,134z" />
+                    <path class="grey-fill" d="M453.52,136l-6.49,9.39L441,136H453.52 M457.33,134h-20l9.63,15L457.33,134L457.33,134z" />
                 </g>
             </g>
             <g id="cursor_netzdg">
                 <line class="st17" x1="909.13" y1="1129.27" x2="909.13" y2="149.57" />
                 <g>
                     <polygon class="st3" points="901.46,135 917.73,135 909.29,147.2 			" />
-                    <path class="st18" d="M915.82,136l-6.49,9.39l-6.03-9.39H915.82 M919.63,134h-20l9.63,15L919.63,134L919.63,134z" />
+                    <path class="grey-fill" d="M915.82,136l-6.49,9.39l-6.03-9.39H915.82 M919.63,134h-20l9.63,15L919.63,134L919.63,134z" />
                 </g>
             </g>
         </g>
         <g id="grafico">
-            <g id="line_others" class="line-graph" js-line="japan">
-                <text transform="matrix(1 0 0 1 1499.9277 1127.7627)" class="st18 st13 st16 line-label">Average &lt;
-                    100.000</text>
+            <g transform="matrix(1 0 0 1 1499.9277 1112.7627)">
+                <text class="st18 st13 st16 line-label">Average of other countries</text>
+                <text y="22" class="st18 st13 st16 line-label">&lpar;&lt; 100.000&rpar;</text>
+            </g>
+            <g id="line_others" class="line-graph" js-line="japan" transform="matrix(1 0 0 1 0 -2)">
                 <polyline class="line st19" points="91.22,1128.62 126.78,1127.91 162.34,1127.95 197.91,1127.4 233.47,1126.7 269.03,1127.93 
 			304.59,1127.93 340.15,1127.99 375.71,1127.79 411.27,1127.83 446.84,1127.84 482.4,1127.83 517.96,1128.13 553.52,1128.13 
 			589.08,1127.96 624.64,1127.66 660.2,1126.86 695.76,1127.61 731.33,1127.61 766.89,1127.66 802.45,1127.44 838.01,1127.65 
 			873.57,1127.22 909.13,1127.61 944.69,1127.98 980.26,1127.7 1015.82,1127.59 1051.38,1126.88 1086.94,1126.88 1119.86,1127.66 
 			1155.42,1127.66 1190.98,1127.59 1226.54,1127.04 1262.1,1127.04 1297.66,1127.08 1333.22,1127.42 1368.79,1127.66 
-			1404.35,1127.17 1439.91,1127.17 1475.47,1126.07 		" />
+			1404.35,1127.17 1439.91,1127.17 1475.47,1126.07" />
             </g>
             <g id="line_charlottesville" class="line-graph" js-line="us">
                 <g class="hover-popup" js-line="us">
@@ -469,8 +497,7 @@
 					L980.26,705.5z" />
                     </g>
                 </g>
-                <text transform="matrix(1 0 0 1 1499.9277 945.4502)" class="st5 st13 st16 line-label">English -
-                    1.143.885</text>
+                <text transform="matrix(1 0 0 1 1499.9277 945.4502)" class="st5 st13 st16 line-label">English</text>
             </g>
             <g id="line_japan" class="line-graph" js-line="japan">
                 <g class="hover-popup" js-line="japan">
@@ -518,8 +545,7 @@
                         <text transform="matrix(1 0 0 1 1048.6035 638.918)" class="st14 st10">(Mine's hate speech)</text>
                     </g>
                 </g>
-                <text transform="matrix(1 0 0 1 1499.9277 1039.5128)" class="st21 st13 st16 line-label">Japanese -
-                    922.965</text>
+                <text transform="matrix(1 0 0 1 1499.9277 1039.5128)" class="st21 st13 st16 line-label">Japanese</text>
                 <polyline id="japan-path" data-min="7482" data-max="175000" class="line st22" points="91.22,1036.56 126.77,1011.85 162.18,1052.82 197.58,1051.71 232.99,1051.71 269.03,1035.02 
 			304.59,817.42 339.21,1056.3 375.71,826.41 410.02,945.53 446.84,830.14 482.4,257.73 517.96,977.43 553.52,1059.16 
 			589.08,1078.94 624.64,1083.33 660.2,1067.64 695.76,1078.65 731.33,1079.41 766.89,1070 802.68,1073.43 838.01,1092.25 
@@ -556,53 +582,77 @@
                 1.143.885</text>
             <text transform="matrix(1 0 0 1 1499.9277 176.5128)" class="st21 st13 st16 states-list-el">Japanese -
                 922.965</text>
-            <text transform="matrix(1 0 0 1 1499.9277 195.5754)" class="st18 st13 st16 states-list-el">Portuguese -
-                81.937</text>
-            <text transform="matrix(1 0 0 1 1499.9277 214.6376)" class="st18 st13 st16 states-list-el">Russian - 62.189</text>
-            <text transform="matrix(1 0 0 1 1499.9277 233.7002)" class="st18 st13 st16 states-list-el">Polish - 61.640</text>
-            <text transform="matrix(1 0 0 1 1499.9277 252.7628)" class="st18 st13 st16 states-list-el">Indonesian -
-                60.088</text>
-            <text transform="matrix(1 0 0 1 1499.9277 271.8254)" class="st18 st13 st16 states-list-el">German - 47.466</text>
-            <text transform="matrix(1 0 0 1 1499.9277 290.888)" class="st18 st13 st16 states-list-el">Hebrew - 44.677</text>
-            <text transform="matrix(1 0 0 1 1499.9277 309.9507)" class="st18 st13 st16 states-list-el">Finnish - 32.227</text>
-            <text transform="matrix(1 0 0 1 1499.9277 329.0133)" class="st18 st13 st16 states-list-el">Spanish - 27.476</text>
-            <text transform="matrix(1 0 0 1 1499.9277 348.0759)" class="st18 st13 st16 states-list-el">Chinese - 24.698</text>
-            <text transform="matrix(1 0 0 1 1499.9277 367.1385)" class="st18 st13 st16 states-list-el">French - 17.629</text>
-            <text transform="matrix(1 0 0 1 1499.9277 386.2007)" class="st18 st13 st16 states-list-el">Dutch - 11.308</text>
-            <text transform="matrix(1 0 0 1 1499.9277 405.2632)" class="st18 st13 st16 states-list-el">Korean - 9.401</text>
-            <text transform="matrix(1 0 0 1 1499.9277 424.3259)" class="st18 st13 st16 states-list-el">Croatian - 8.950</text>
-            <text transform="matrix(1 0 0 1 1499.9277 443.3885)" class="st18 st13 st16 states-list-el">Turkish - 8.377</text>
-            <text transform="matrix(1 0 0 1 1499.9277 462.4511)" class="st18 st13 st16 states-list-el">Hungarian -
-                7.345</text>
-            <text transform="matrix(1 0 0 1 1499.9277 481.5132)" class="st18 st13 st16 states-list-el">Italian - 6.344</text>
-            <text transform="matrix(1 0 0 1 1499.9277 500.5759)" class="st18 st13 st16 states-list-el">Ukranian - 6.768</text>
-            <text transform="matrix(1 0 0 1 1499.9277 519.6385)" class="st18 st13 st16 states-list-el">Serbian - 6.576</text>
-            <text transform="matrix(1 0 0 1 1499.9277 538.7011)" class="st18 st13 st16 states-list-el">Slovakian -
-                6.063</text>
-            <text transform="matrix(1 0 0 1 1499.9277 557.7632)" class="st18 st13 st16 states-list-el">Norvegian -
-                5.332</text>
-            <text transform="matrix(1 0 0 1 1499.9277 576.8254)" class="st18 st13 st16 states-list-el">Slovene - 4.700</text>
-            <text transform="matrix(1 0 0 1 1499.9277 595.888)" class="st18 st13 st16 states-list-el">Greek - 4.602</text>
-            <text transform="matrix(1 0 0 1 1499.9277 614.9506)" class="st18 st13 st16 states-list-el">Estonian - 3.959</text>
-            <text transform="matrix(1 0 0 1 1499.9277 634.0132)" class="st18 st13 st16 states-list-el">Arab - 3.165</text>
-            <text transform="matrix(1 0 0 1 1499.9277 653.0753)" class="st18 st13 st16 states-list-el">Persian - 3.619</text>
-            <text transform="matrix(1 0 0 1 1499.9277 672.138)" class="st18 st13 st16 states-list-el">Thai - 3.393</text>
-            <text transform="matrix(1 0 0 1 1499.9277 691.2006)" class="st18 st13 st16 states-list-el">Simple English -
-                2.833</text>
-            <text transform="matrix(1 0 0 1 1499.9277 710.2632)" class="st18 st13 st16 states-list-el">Macedonian -
-                2.759</text>
-            <text transform="matrix(1 0 0 1 1499.9277 729.3253)" class="st18 st13 st16 states-list-el">Serbian-Croatian
-                -
-                2.293</text>
-            <text transform="matrix(1 0 0 1 1499.9277 748.3875)" class="st18 st13 st16 states-list-el">Afrikaans -
-                1.742</text>
-            <text transform="matrix(1 0 0 1 1499.9277 767.4501)" class="st18 st13 st16 states-list-el">Icelandic -
-                1.412</text>
-            <text transform="matrix(1 0 0 1 1499.9277 786.5127)" class="st18 st13 st16 states-list-el">Swedish - 1.250</text>
-            <text transform="matrix(1 0 0 1 1499.9277 805.5753)" class="st18 st13 st16 states-list-el">Burmese - 553</text>
-            <text transform="matrix(1 0 0 1 1499.9277 824.6375)" class="st18 st13 st16 states-list-el">Latin - 465</text>
-            <text transform="matrix(1 0 0 1 1499.9277 843.7001)" class="st18 st13 st16 states-list-el">Basque - 332</text>
-            <text transform="matrix(1 0 0 1 1499.9277 862.7627)" class="st18 st13 st16 states-list-el">Urdu - 48</text>
+            <g transform="matrix(1 0 0 1 0 20)">
+                <text transform="matrix(1 0 0 1 1499.9277 195.5754)" class="st18 st13 st16 states-list-el">Portuguese -
+                    81.937</text>
+                <text transform="matrix(1 0 0 1 1499.9277 214.6376)" class="st18 st13 st16 states-list-el">Russian -
+                    62.189</text>
+                <text transform="matrix(1 0 0 1 1499.9277 233.7002)" class="st18 st13 st16 states-list-el">Polish -
+                    61.640</text>
+                <text transform="matrix(1 0 0 1 1499.9277 252.7628)" class="st18 st13 st16 states-list-el">Indonesian -
+                    60.088</text>
+                <text transform="matrix(1 0 0 1 1499.9277 271.8254)" class="st18 st13 st16 states-list-el">German -
+                    47.466</text>
+                <text transform="matrix(1 0 0 1 1499.9277 290.888)" class="st18 st13 st16 states-list-el">Hebrew -
+                    44.677</text>
+                <text transform="matrix(1 0 0 1 1499.9277 309.9507)" class="st18 st13 st16 states-list-el">Finnish -
+                    32.227</text>
+                <text transform="matrix(1 0 0 1 1499.9277 329.0133)" class="st18 st13 st16 states-list-el">Spanish -
+                    27.476</text>
+                <text transform="matrix(1 0 0 1 1499.9277 348.0759)" class="st18 st13 st16 states-list-el">Chinese -
+                    24.698</text>
+                <text transform="matrix(1 0 0 1 1499.9277 367.1385)" class="st18 st13 st16 states-list-el">French -
+                    17.629</text>
+                <text transform="matrix(1 0 0 1 1499.9277 386.2007)" class="st18 st13 st16 states-list-el">Dutch -
+                    11.308</text>
+                <text transform="matrix(1 0 0 1 1499.9277 405.2632)" class="st18 st13 st16 states-list-el">Korean -
+                    9.401</text>
+                <text transform="matrix(1 0 0 1 1499.9277 424.3259)" class="st18 st13 st16 states-list-el">Croatian -
+                    8.950</text>
+                <text transform="matrix(1 0 0 1 1499.9277 443.3885)" class="st18 st13 st16 states-list-el">Turkish -
+                    8.377</text>
+                <text transform="matrix(1 0 0 1 1499.9277 462.4511)" class="st18 st13 st16 states-list-el">Hungarian -
+                    7.345</text>
+                <text transform="matrix(1 0 0 1 1499.9277 481.5132)" class="st18 st13 st16 states-list-el">Italian -
+                    6.344</text>
+                <text transform="matrix(1 0 0 1 1499.9277 500.5759)" class="st18 st13 st16 states-list-el">Ukranian -
+                    6.768</text>
+                <text transform="matrix(1 0 0 1 1499.9277 519.6385)" class="st18 st13 st16 states-list-el">Serbian -
+                    6.576</text>
+                <text transform="matrix(1 0 0 1 1499.9277 538.7011)" class="st18 st13 st16 states-list-el">Slovakian -
+                    6.063</text>
+                <text transform="matrix(1 0 0 1 1499.9277 557.7632)" class="st18 st13 st16 states-list-el">Norvegian -
+                    5.332</text>
+                <text transform="matrix(1 0 0 1 1499.9277 576.8254)" class="st18 st13 st16 states-list-el">Slovene -
+                    4.700</text>
+                <text transform="matrix(1 0 0 1 1499.9277 595.888)" class="st18 st13 st16 states-list-el">Greek - 4.602</text>
+                <text transform="matrix(1 0 0 1 1499.9277 614.9506)" class="st18 st13 st16 states-list-el">Estonian -
+                    3.959</text>
+                <text transform="matrix(1 0 0 1 1499.9277 634.0132)" class="st18 st13 st16 states-list-el">Arab - 3.165</text>
+                <text transform="matrix(1 0 0 1 1499.9277 653.0753)" class="st18 st13 st16 states-list-el">Persian -
+                    3.619</text>
+                <text transform="matrix(1 0 0 1 1499.9277 672.138)" class="st18 st13 st16 states-list-el">Thai - 3.393</text>
+                <text transform="matrix(1 0 0 1 1499.9277 691.2006)" class="st18 st13 st16 states-list-el">Simple
+                    English -
+                    2.833</text>
+                <text transform="matrix(1 0 0 1 1499.9277 710.2632)" class="st18 st13 st16 states-list-el">Macedonian -
+                    2.759</text>
+                <text transform="matrix(1 0 0 1 1499.9277 729.3253)" class="st18 st13 st16 states-list-el">Serbian-Croatian
+                    -
+                    2.293</text>
+                <text transform="matrix(1 0 0 1 1499.9277 748.3875)" class="st18 st13 st16 states-list-el">Afrikaans -
+                    1.742</text>
+                <text transform="matrix(1 0 0 1 1499.9277 767.4501)" class="st18 st13 st16 states-list-el">Icelandic -
+                    1.412</text>
+                <text transform="matrix(1 0 0 1 1499.9277 786.5127)" class="st18 st13 st16 states-list-el">Swedish -
+                    1.250</text>
+                <text transform="matrix(1 0 0 1 1499.9277 805.5753)" class="st18 st13 st16 states-list-el">Burmese -
+                    553</text>
+                <text transform="matrix(1 0 0 1 1499.9277 824.6375)" class="st18 st13 st16 states-list-el">Latin - 465</text>
+                <text transform="matrix(1 0 0 1 1499.9277 843.7001)" class="st18 st13 st16 states-list-el">Basque - 332</text>
+                <text transform="matrix(1 0 0 1 1499.9277 862.7627)" class="st18 st13 st16 states-list-el">Urdu - 48</text>
+
+            </g>
         </g>
         <g id="labels">
             <g class="st23">
@@ -854,7 +904,7 @@
     </g>
 </svg>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
 <script src="/assets/js/viz03.js" charset="utf-8"></script>
     <!-- codice per inserire l'immagine, da pensare come renderlo generale -->
 </main>

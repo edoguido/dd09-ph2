@@ -1,5 +1,5 @@
 ---
-title: 2.3 What are the topics in common between Hate Speech and Hate Crime?
+title: 2.3 – What are the topics in common between Hate Speech and Hate Crime?
 cover: /assets/images/covers/viz02.jpg
 number: 4
 ---
