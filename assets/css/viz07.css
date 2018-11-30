@@ -1,55 +1,58 @@
 
 #nodata, #shutteddown, #online {
     opacity: 0;
-    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 #nodata.on, #shutteddown.on, #online.on {
     opacity: 1;
-    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 .divider {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 .divider.online {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
+    z-index:1;
     fill: white;
 }
 
 .divider.nodata {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+    z-index:100;
     fill: #7f7fff;
 }
 
 .divider.shutteddown {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
-    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+    z-index:100;
     fill: #CE3B19;
 }
 
 /*       CATEGORIES      */
 #cat {
-    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
     opacity: 1;
     cursor: pointer;
 }
 
 #cat.faded {
-    transition: opacity .6s cubic-bezier(.65, 0, .15, 1);
+    transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
     opacity: 0;
 }
 
 /*       BOX         */
 #online-box, #nodata-box, #shutteddown-box {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 #cat {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 #cat.faded {
@@ -61,7 +64,7 @@
     stroke:#0000FF;
     stroke-width:1.5;
     stroke-miterlimit:10;
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 .nodata-s{
@@ -69,7 +72,7 @@
     stroke:#7f7fff;
     stroke-width:1.5;
     stroke-miterlimit:10;
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 .shutteddown-s{
@@ -77,31 +80,31 @@
     stroke:#CE3B19;
     stroke-width:1.5;
     stroke-miterlimit:10;
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 #online-box.filled {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
     fill:#0000FF;
 }
 
 #nodata-box.filled {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
     fill: #7f7fff;
 }
 
 #shutteddown-box.filled{
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
     fill: #CE3B19;
 }
 
 #online-text, #nodata-text, #shutteddown-text {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
     cursor: pointer;
 }
 
 #online-text.white, #nodata-text.white, #shutteddown-text.white {
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1);
     fill: white;
 }
 
@@ -112,13 +115,13 @@
 
 .direct, .referrals, .search, .social, .mail, .display {
     opacity: .5;
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1),
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1),
     opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
 .direct-on, .referrals-on, .search-on, .social-on, .mail-on, .display-on {
     opacity: 1;
-    transition: fill .6s cubic-bezier(.65, 0, .15, 1),
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1),
     opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
