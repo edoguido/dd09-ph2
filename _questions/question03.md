@@ -1,5 +1,5 @@
 ---
-title: 2.2 Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?
+title: 2.2 - Which events may have caused peaks of views on the Wikipedia pages of Hate Speech?
 cover: /assets/images/covers/viz02.jpg
 number: 3
 ---

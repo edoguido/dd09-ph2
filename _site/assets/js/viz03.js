@@ -2,7 +2,7 @@
 
 var labels = document.getElementsByClassName('line-label');
 
-for (i = 0; i < labels.length; i++) {
+for (var i = 0; i < labels.length; i++) {
     thisLabel = labels[i];
     thisLabel.addEventListener('mouseover', function (thisLabel) {
         var toIgnore = thisLabel.srcElement;
@@ -19,6 +19,19 @@ for (i = 0; i < labels.length; i++) {
     }, false);
 }
 
+var popups = document.getElementsByClassName('hover-popup');
+var isOnPopup = false;
+
+for(var i = 0; i < popups.length; i++){
+    popups[i].addEventListener('mouseover', function (e) {
+        isOnPopup = true;
+    });
+    popups[i].addEventListener('mouseout', function (e) {
+        isOnPopup = false;
+    });
+}
+
+
 
 // **           CURSORE GRAFICO          ** //
 
@@ -34,44 +47,54 @@ showCursor();
 var cursor;
 var cursorTag;
 var cursorLabel;
+var cursorCaption;
 
 var context = document.getElementById('svg-box');
 var svg = document.getElementsByTagName('svg')[0];
 var svgHeight;
+var grid = document.getElementById('griglia');
+
 
 function showCursor() {
     cursor = document.createElementNS("http://www.w3.org/2000/svg", "line");
     var lineAttributes = ['id', 'x1', 'y1', 'x2', 'y2', 'stroke'];
-    var lineValues = ['cursor', 0, 0, 0, 0, 'black'];
+    var lineValues = ['cursor', 0, 0, 0, 0, 'grey'];
     setAttributes(cursor, lineAttributes, lineValues);
 
     cursorTag = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    var tagAttributes = ['id', 'x', 'y', 'width', 'height', 'fill'];
-    var tagValues = ['tag', 0, 0, 120, 72, 'blue'];
+    var tagAttributes = ['id', 'x', 'y', 'width', 'height', 'fill', 'stroke', 'stroke-width'];
+    var tagValues = ['tag', 0, 0, 120, 72, 'white', 'blue', 2];
     setAttributes(cursorTag, tagAttributes, tagValues);
 
     cursorLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
     var labelAttributes = ['id', 'x', 'y', 'fill'];
-    var labelValues = ['tag-label', '50', '50', 'white'];
+    var labelValues = ['tag-label', '50', '50', 'black'];
     cursorLabel.innerHTML = '0';
     setAttributes(cursorLabel, labelAttributes, labelValues);
 
     cursorTag2 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    var tagAttributes2 = ['id', 'x', 'y', 'width', 'height', 'fill'];
-    var tagValues2 = ['tag2', 0, 0, 120, 72, 'orange'];
+    var tagAttributes2 = ['id', 'x', 'y', 'width', 'height', 'fill', 'stroke', 'stroke-width'];
+    var tagValues2 = ['tag2', 0, 0, 120, 72, 'white', '#F78028', 2];
     setAttributes(cursorTag2, tagAttributes2, tagValues2);
 
     cursorLabel2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
     var labelAttributes2 = ['id', 'x', 'y', 'fill'];
-    var labelValues2 = ['tag-label2', '50', '50', 'white'];
+    var labelValues2 = ['tag-label2', '50', '50', 'black'];
     cursorLabel2.innerHTML = '0';
     setAttributes(cursorLabel2, labelAttributes2, labelValues2);
+
+    cursorCaption = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    var cursorAttributes = ['id', 'x', 'y', 'fill'];
+    var cursorValues = ['tag-caption', '50', '50', 'black'];
+    cursorCaption.innerHTML = 'Values over time';
+    setAttributes(cursorCaption, cursorAttributes, cursorValues);
 
     document.getElementsByTagName('svg')[0].appendChild(cursor);
     document.getElementsByTagName('svg')[0].appendChild(cursorTag);
     document.getElementsByTagName('svg')[0].appendChild(cursorLabel);
     document.getElementsByTagName('svg')[0].appendChild(cursorTag2);
     document.getElementsByTagName('svg')[0].appendChild(cursorLabel2);
+    document.getElementsByTagName('svg')[0].appendChild(cursorCaption);
 }
 
 function setAttributes(svgEl, attributes, values) {
@@ -86,6 +109,7 @@ document.addEventListener('mousemove', function () {
     updateCursor(event, cursorLabel);
     updateCursor(event, cursorTag2);
     updateCursor(event, cursorLabel2);
+    updateCursor(event, cursorCaption);
 }, false);
 
 function updateCursor(e, el) {
@@ -96,19 +120,26 @@ function updateCursor(e, el) {
 
     var mouseCoordSvg = svgPoint(cursorTag, x, y);
 
-    var grid = document.getElementById('griglia');
     var gridLeft = grid.getBoundingClientRect().left;
     var gridRight = grid.getBoundingClientRect().right;
     var gridTop = grid.getBoundingClientRect().top;
     var gridBottom = grid.getBoundingClientRect().bottom;
 
+    // function isOverPopup(el) {
+    //     popups = document.getElementsByClassName('hover-popup');
+    //     popups.hover(function() {
+    //         $(this).removeClass('show');
+    //     })
+    // }
 
-    if (x > gridLeft && x < gridRight && y > gridTop && y < gridBottom) {
+    if (x > gridLeft && x < gridRight && y > gridTop && y < gridBottom && isOnPopup != true) {
         el.classList.add('show');
+        // isOverPopup(el);
     } else {
         el.classList.remove('show');
     };
 
+    
     var newAttributes = ['x1', 'x2', 'y1', 'y2'];
     var newValues = [svgCoord.x, svgCoord.x, 100, svgHeight];
 
@@ -118,15 +149,18 @@ function updateCursor(e, el) {
     var newValuesTag = [newXTag, newYTag];
 
     var newAttributesLabel = ['x', 'y'];
-    var newValuesLabel = [svgCoord.x - (cursorLabel.clientWidth / 2), mouseCoordSvg.y - cursorLabel.clientHeight * 2];
+    var newValuesLabel = [svgCoord.x, mouseCoordSvg.y - cursorLabel.getBoundingClientRect().height - 24 * 1.3];
 
     var newAttributesTag2 = ['x', 'y'];
     var newXTag2 = mouseCoordSvg.x - cursorTag.getAttribute('width') / 2;
     var newYTag2 = mouseCoordSvg.y - cursorTag.getAttribute('height') - 96;
     var newValuesTag2 = [newXTag2, newYTag2];
-
+    
     var newAttributesLabel2 = ['x', 'y'];
-    var newValuesLabel2 = [svgCoord.x - (cursorLabel2.clientWidth / 2), mouseCoordSvg.y - 84 - cursorLabel2.clientHeight * 2];
+    var newValuesLabel2 = [svgCoord.x, mouseCoordSvg.y - cursorLabel2.getBoundingClientRect().height - 24 * 4.75];
+    
+    var newAttributesCursor = ['x', 'y'];
+    var newValuesCursor = [svgCoord.x, mouseCoordSvg.y - cursorCaption.getBoundingClientRect().height - 24 * 7.2];
 
     for (i = 0; i < newAttributes.length; i++) {
         setAttributes(cursor, newAttributes, newValues);
@@ -142,6 +176,9 @@ function updateCursor(e, el) {
     }
     for (i = 0; i < newAttributesLabel2.length; i++) {
         setAttributes(cursorLabel2, newAttributesLabel2, newValuesLabel2);
+    }
+    for (i = 0; i < newAttributesCursor.length; i++) {
+        setAttributes(cursorCaption, newAttributesCursor, newValuesCursor);
     }
     updateLabelValue(svgCoord.x, 'japan-path', 'tag-label');
     updateLabelValue(svgCoord.x, 'us-path', 'tag-label2');
@@ -207,6 +244,5 @@ function svgPoint(element, x, y) {
     pt.x = x;
     pt.y = y;
     var output = pt.matrixTransform(element.getScreenCTM().inverse());
-    // we only need x coordinate
     return output;
 }

@@ -1,5 +1,5 @@
 ---
-title: 3.4 Is it possible to identify a Hate Echo Chamber?
+title: 3.4 – Is it possible to identify a Hate Echo Chamber?
 cover: /assets/images/covers/viz02.jpg
 number: 8
 ---

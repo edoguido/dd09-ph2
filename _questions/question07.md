@@ -1,5 +1,5 @@
 ---
-title: 3.3 How does the user reach hate sites?
+title: 3.3 – How does the user reach hate sites?
 cover: /assets/images/covers/viz02.jpg
 number: 7
 ---

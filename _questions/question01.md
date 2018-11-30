@@ -1,5 +1,5 @@
 ---
-title: 1 What do users find when they search “Hate Speech” on Google?
+title: 1 – What do users find when they search “Hate Speech” on Google?
 cover: /assets/images/covers/viz02.jpg
 number: 1
 ---

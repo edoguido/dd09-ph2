@@ -1,5 +1,5 @@
 ---
-title: 3.1 Which are the characteristics of the sites being accused to spread hate?
+title: 3.1 – Which are the characteristics of the sites being accused to spread hate?
 cover: /assets/images/covers/viz02.jpg
 number: 5
 ---
