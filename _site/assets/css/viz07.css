@@ -49,6 +49,7 @@
 /*       BOX         */
 #online-box, #nodata-box, #shutteddown-box {
     transition: fill .45s cubic-bezier(.65, 0, .15, 1);
+    cursor: pointer;
 }
 
 #cat {

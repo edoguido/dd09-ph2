@@ -6,6 +6,10 @@
     margin: 32 auto;
 }
 
+.main-viz-n {
+    max-height: 100vh;
+}
+
 /* svg styles */
 
 svg {
