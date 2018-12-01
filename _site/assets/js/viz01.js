@@ -27,13 +27,16 @@ function updateTooltipPos(e, el) {
 
     if (clientWidth - x <= elWidth && clientHeight - y <= elHeight) {
         el.style.left = x - (x + elWidth - clientWidth) + 'px';
-        el.style.top = y - (y + elHeight - clientHeight) + 'px';
+        el.style.top = y - elHeight - 20 + 'px';
+
     } else if (clientWidth - x >= elWidth && clientHeight - y <= elHeight) {
         el.style.left = x + 'px'
         el.style.top = y - (y + elHeight - clientHeight) + 'px';
+
     } else if (clientWidth - x <= elWidth && clientHeight - y >= elHeight) {
         el.style.left = x - (x + elWidth - clientWidth) + 'px';
         el.style.top = y + 'px';
+
     } else if (x < clientWidth - elWidth || y < clientWidth - elWidth) {
             el.style.left = x + 'px';
             el.style.top = y + 'px';

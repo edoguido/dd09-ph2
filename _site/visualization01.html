@@ -24,14 +24,15 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
 
-            transition: opacity .15s linear;
-
+            transition: opacity .15s cubic-bezier(0.075, 0.82, 0.165, 1), /* top 1s cubic-bezier(0.075, 0.82, 0.165, 1) */;
+            
             box-sizing: border-box;
+            
         }
-
+        
         #tooltip.summon {
             opacity: 1;
-            transition: opacity .15s ease-in-out;
+            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), /* top 1s cubic-bezier(0.075, 0.82, 0.165, 1) */;
         }
 
         #tooltip > p {
