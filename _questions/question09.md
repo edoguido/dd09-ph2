@@ -1,7 +1,7 @@
 ---
 title: 4 How does the discussion about Hate Speech & Filtering develop on the web?
 cover: /assets/images/covers/viz02.jpg
-number: 11
+number: 9
 ---
 
 ### Description 
@@ -16,6 +16,7 @@ Therefore, the protocol shows which platforms deal with the topic, whether they 
 In addition, the figure of Nadine Strossen emerges, a writer who supports the idea that proposes to fight Hate Speech with Free Speech and not censorship.
 Also the EU and the US stand out from the visualization because of the different legislative conduct and mindset regarding Hate Speech, which often cause discussions on the theme.
 
+![Secondary visualization]({{ '/assets/images/secondary-viz-kialo.svg' | relative_url }})
 
 ### Protocol
 
@@ -32,4 +33,4 @@ After these sites’ categorization, we analyzed what are the most frequents wor
 ### Data
 ##### Data Source: [WebPulse Site Review tool](https://sitereview.bluecoat.com/#/), [Voyant Tools](https://voyant-tools.org/)
 ##### Timestamp: 10/31/2018
-##### [View Data (... KB)](http://densitydesign.org/)
+##### [View Data](http://densitydesign.org/)
