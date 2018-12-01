@@ -16,41 +16,41 @@ for (i = 0; i < toggles.length; i++) {
                 noneActive = true;
 
                 unFaded = 1;
-                console.log('unFaded: ' + unFaded);
+                // console.log('unFaded: ' + unFaded);
 
                 switch (this.id) {
                     case 'facebook-toggle':
-                        console.log('turning OFF ' + this.id);
+                        // console.log('turning OFF ' + this.id);
                         var toIgnore = document.getElementById('Facebook');
                         unFadeOthers(toIgnore);
                         break;
 
                     case 'google-toggle':
-                        console.log('turning OFF ' + this.id);
+                        // console.log('turning OFF ' + this.id);
                         var toIgnore = document.getElementById('Google');
                         unFadeOthers(toIgnore);
                         break;
 
                     case 'twitter-toggle':
-                        console.log('turning OFF ' + this.id);
+                        // console.log('turning OFF ' + this.id);
                         var toIgnore = document.getElementById('Twitter');
                         unFadeOthers(toIgnore);
                         break;
 
                     case 'germany-toggle':
-                        console.log('turning OFF ' + this.id);
+                        // console.log('turning OFF ' + this.id);
                         var toIgnore = document.getElementById('Germany');
                         unFadeOthers(toIgnore);
                         break;
 
                     case 'us-toggle':
-                        console.log('turning OFF ' + this.id);
+                        // console.log('turning OFF ' + this.id);
                         var toIgnore = document.getElementById('U.S.');
                         unFadeOthers(toIgnore);
                         break;
 
                     case 'nadine-strossen-toggle':
-                        console.log('turning OFF ' + this.id);
+                        // console.log('turning OFF ' + this.id);
                         var toIgnore = document.getElementById('Nadine_strossen');
                         unFadeOthers(toIgnore);
                         break;
@@ -62,7 +62,7 @@ for (i = 0; i < toggles.length; i++) {
                 noneActive = false;
 
                 unFaded = 1;
-                console.log('unFaded: ' + unFaded);
+                // console.log('unFaded: ' + unFaded);
 
                 initialFaded = this.id;
                 switch (this.id) {

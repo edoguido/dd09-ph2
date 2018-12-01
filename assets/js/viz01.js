@@ -38,8 +38,8 @@ function updateTooltipPos(e, el) {
         el.style.top = y + 'px';
 
     } else if (x < clientWidth - elWidth || y < clientWidth - elWidth) {
-            el.style.left = x + 'px';
-            el.style.top = y + 'px';
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
     }
 
     return {
@@ -62,10 +62,10 @@ for (var i = 0; i < ball.length; i++) {
                 var percentage = event.target.getAttribute('js-perc');
                 var websiteName = event.target.getAttribute('js-name');
                 var text = event.target.getAttribute('js-text');
-                tooltip.innerHTML = 
-                (websiteName == null ? toolTxt.innerHTML = '' : websiteName + '<br>') +
-                (percentage == null ? toolTxt.innerHTML = 'No&nbsp;data' : 'Share:&nbsp;' + percentage + '%' + '<br><br>') + 
-                '"' + text + '"';
+                tooltip.innerHTML =
+                    (websiteName == null ? toolTxt.innerHTML = '' : websiteName + '<br>') +
+                    (percentage == null ? toolTxt.innerHTML = 'No&nbsp;data' : 'Share:&nbsp;' + percentage + '%' + '<br><br>') +
+                    '"' + text + '"';
             }
         }
     }, false);
@@ -76,3 +76,25 @@ for (var i = 0; i < ball.length; i++) {
         }
     }, false);
 }
+
+var wiki = document.getElementById('wiki-ball_9_');
+
+wiki.addEventListener('click', function (event) {
+    updateTooltipPos(event, tooltip);
+
+    var siteName = 'en.wikipedia.org/wiki/Hate_speech';
+    var url = 'http://' + siteName + '';
+
+    if (tooltip.classList.contains('summon') && wiki.style.cursor == 'pointer') {
+        wiki.style.cursor = 'default';
+        window.open(url, '_blank');
+    } else {
+        tooltip.innerHTML = 'en.wikipedia.org' + '<br>' + 'Share:&nbsp; 61.24%' + '<br><br>' + '"Hate speech is speech that attacks a person or group on the basis of attributes such as race, religion, ethnic origin, national origin, sex, disability, sexual orientation, or gender identity.<br>[...] A website that contains hate speech (online hate speech) may be called a hate site. Many of these sites contain Internet forums and news briefs that emphasize a particular viewpoint. There has been debate over freedom of speech, hate speech and hate speech legislation"'
+        wiki.style.cursor = 'pointer';
+        tooltip.classList.add('summon');
+    }
+}, false)
+wiki.addEventListener('mouseout', function (event) {
+    wiki.style.cursor = 'default';
+    tooltip.classList.remove('summon');
+}, false)

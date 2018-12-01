@@ -24,7 +24,7 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
 
-            transition: opacity .15s cubic-bezier(0.075, 0.82, 0.165, 1), /* top 1s cubic-bezier(0.075, 0.82, 0.165, 1) */;
+            transition: opacity .1s cubic-bezier(0.075, 0.82, 0.165, 1) , top 1s cubic-bezier(0.075, 0.82, 0.165, 1) ;
             
             box-sizing: border-box;
             
@@ -32,7 +32,7 @@
         
         #tooltip.summon {
             opacity: 1;
-            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), /* top 1s cubic-bezier(0.075, 0.82, 0.165, 1) */;
+            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1) , top 1s cubic-bezier(0.075, 0.82, 0.165, 1) ;
         }
 
         #tooltip > p {
@@ -46,13 +46,15 @@
         
         #wiki-ball_9_ {
             pointer-events: fill;
-            opacity: .15;
+            opacity: .1;
             transition: opacity .45s cubic-bezier(0.075, 0.82, 0.165, 1)
         }
-        <!-- #wiki-ball_9_:hover {
-            opacity: 0.05;
+        #wiki-ball_9_:hover {
+            opacity: 0.35;
+            stroke-width: 1;
+            stroke: var(--color-main);
             transition: opacity .45s cubic-bezier(0.075, 0.82, 0.165, 1)
-        } -->
+        }
 
         .websites tspan,
         .websites text {
