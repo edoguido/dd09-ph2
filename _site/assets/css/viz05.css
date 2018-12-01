@@ -5,6 +5,9 @@ cat-up  Categorie in alto (gruppi)
 cat-sx  Categorie a sinistra (lista)
 */
 
+* {
+    cursor: default;
+}
 
 /* ---- Colori ---- */
 .st49{fill:#0033FF;}
@@ -84,26 +87,51 @@ cat-sx  Categorie a sinistra (lista)
 .st0{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;}
 .st1{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9879,3.9879;}
 .st2{fill:none;stroke:#CCCCCC;stroke-width:0.25;stroke-miterlimit:10;}
-.st3{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9765,3.9765;}
-.st4{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.8968,3.8968;}
-.st5{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9907,3.9907;}
-.st6{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.7735,3.7735;}
-.st7{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9828,3.9828;}
-.st8{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9784,3.9784;}
-.st9{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.8298,3.8298;}
-.st10{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9743,3.9743;}
-.st11{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:4.0227,4.0227;}
-.st12{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9877,3.9877;}
-.st13{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9818,3.9818;}
-.st14{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:4.0587,4.0587;}
-.st15{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9754,3.9754;}
-.st16{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9124,3.9124;}
-.st17{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9143,3.9143;}
-.st18{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:4.0202,4.0202;}
-.st19{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.8639,3.8639;}
-.st20{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9882,3.9882;}
-.st21{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.8297,3.8297;}
-.st22{fill:none;stroke:#CCCCCC;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.9867,3.9867;}
+
+.st3,
+.st4,
+.st5,
+.st6,
+.st7,
+.st8,
+.st9,
+.st10,
+.st11,
+.st12,
+.st13,
+.st14,
+.st15,
+.st16,
+.st17,
+.st18,
+.st19,
+.st20,
+.st21,
+.st22 {
+    stroke-width: 1;
+}
+
+.st3{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9765,3.9765;}
+.st4{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.8968,3.8968;}
+.st5{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9907,3.9907;}
+.st6{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.7735,3.7735;}
+.st7{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9828,3.9828;}
+.st8{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9784,3.9784;}
+.st9{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.8298,3.8298;}
+.st10{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9743,3.9743;}
+.st11{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:4.0227,4.0227;}
+.st12{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9877,3.9877;}
+.st13{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9818,3.9818;}
+.st14{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:4.0587,4.0587;}
+.st15{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9754,3.9754;}
+.st16{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9124,3.9124;}
+.st17{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9143,3.9143;}
+.st18{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:4.0202,4.0202;}
+.st19{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.8639,3.8639;}
+.st20{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9882,3.9882;}
+.st21{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.8297,3.8297;}
+.st22{fill:none;stroke:#CCCCCC;stroke-miterlimit:10;stroke-dasharray:3.9867,3.9867;}
+
 .st23{fill:none;stroke:#F2C005;stroke-miterlimit:10;}
 .st24{fill:none;stroke:#F78028;stroke-miterlimit:10;}
 .st25{fill:none;stroke:#650499;stroke-miterlimit:10;}
