@@ -26,32 +26,38 @@
 /* ---------    FONT SIZES   --------- */
 .font-size {
     font-size: 10px;
+    cursor: default;
 }
 
 .font-size-2 {
     font-size: 16px;
+    cursor: default;
 }
 
 .font-size-3 {
     font-size: 14px;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+    cursor: default;
 }
 
 .testi-seed {
     font-size: 15px;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+    cursor: default;
 }
 
 .testi-legenda {
     font-size: 16px;
     font-family: 'Mono Text';
     fill :rgb(58, 58, 58);
+    cursor: default;
 }
 
 .testi-legenda-small {
     font-size: 11px;
     font-family: 'Mono Text';
     fill :#CCCCCC;
+    cursor: default;
 }
 
 
@@ -60,6 +66,7 @@
     font-size: 14px;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
     font-family: 'Mono Text';
+    cursor: default;
 }
 
 .testi-viola {
@@ -192,6 +199,10 @@
 .b-toggle-box-on {
     opacity: 1 !important;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
+
+#toggle-button {
+    cursor: pointer;
 }
 
 /* la classe fade ha gli elementi a cui assegnare faded */

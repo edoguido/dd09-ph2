@@ -40,8 +40,8 @@ cat-sx  Categorie a sinistra (lista)
 
 /* ---- Toggle Sopra Box ---- */
 .anim {
-    transition: fill .45s cubic-bezier(.65, 0, .15, 1),
-                opacity .45s cubic-bezier(.65, 0, .15, 1);
+    transition: fill .35s cubic-bezier(.65, 0, .15, 1),
+                opacity .35s cubic-bezier(.65, 0, .15, 1);
 }
 
 .white-text {
@@ -76,7 +76,7 @@ cat-sx  Categorie a sinistra (lista)
 
 /* ---- css ---- */
 .off{
-    opacity: 0.2 !important;
+    opacity: 0.1 !important;
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 

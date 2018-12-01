@@ -181,7 +181,7 @@ $(document).ready((function(){
       // prendo array e lo converto in numeri
       for(i=0; i<getDataStr.length; i++){
         dataArrayInt.push(parseInt(getDataStr[i]));
-        console.log(dataArrayInt[i]);
+        // console.log(dataArrayInt[i]);
       }  
 
       // cerco il match
@@ -220,13 +220,14 @@ $(document).ready((function(){
 // -------------------------------- //
 
 $(document).ready((function(){
+
     $('.site-name, .circles-up').hover(function() {
       if (this.classList.contains('site-name')){
         var n = $(this).data('sitenumber');
-        console.log(n);
+        // console.log(n);
       } else {
         var n = $(this).data('circlenumber');
-        console.log(n);
+        // console.log(n);
       }
 
       $(".site-name").each(function(){
@@ -247,9 +248,40 @@ $(document).ready((function(){
         }
       });
 
+
+      //prendo tutti gli elementi della categoria cat-list
+      //di ciascuno guardo nell'array catlist-data
+      //se array.includes() n --> numero che ho preso dal pallino/scritta in alto
+
+      $(".cat-list").each(function(){
+        var dataArray = [];
+        var dataArrayInt = [];
+        var getDataStr = $(this).attr('catlist-data').split(',');
+        dataArray.push(getDataStr);
+
+        // prendo array e lo converto in numeri
+        for(i=0; i<getDataStr.length; i++){
+          dataArrayInt.push(parseInt(getDataStr[i]));
+        }
+
+        if (dataArrayInt.includes(n) == false) {
+          $(this).toggleClass('off');
+        } 
+
+      });
+      // // lavoro qui
+      // catlist-data
+      // .cat-list
+
+      // var getDataStr = $(this).attr('js-data').split(',');
+      // dataArray.push(getDataStr);
+
     }, function() {
       $('.site-name, .circles-up').removeClass('off');
       $(".circleid").removeClass('off');
+      $(".cat-list").removeClass('off');
+
     })
   })
 );
+
