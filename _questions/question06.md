@@ -56,4 +56,4 @@ For each site we defined the main typology of presentation encountered during th
 
 ##### Timestamp: 11/.../2018
 
-##### [View Data (... KB)](http://densitydesign.org/)
+##### [View Data](http://densitydesign.org/)
