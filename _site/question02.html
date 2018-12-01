@@ -93,7 +93,7 @@
                 </li>
                 
                 <li class="index__item">
-                    <a href="/question11"> 4 How does the discussion about Hate Speech & Filtering develop on the web? </a>
+                    <a href="/question09"> 4 How does the discussion about Hate Speech & Filtering develop on the web? </a>
                 </li>
                 
             </ul>
@@ -140,22 +140,23 @@
             z-index: 1000;
             width: auto;
             height: auto;
-            max-width: 300px;
 
             pointer-events: none;
 
             border: solid 2px var(--color-main-2);
             color: var(--color-main-2);
-            background: var(--color-light);
+            background-color: rgba(255, 255, 255, 0.75);
 
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
 
             transition: opacity .15s linear;
+
+            box-sizing: border-box;
         }
 
         #tooltip.summon {
-            opacity: .90;
+            opacity: 1;
             transition: opacity .15s ease-in-out;
         }
 
@@ -191,7 +192,7 @@
         }
 
         .single-law rect {
-            fill: var(--color-light);
+            fill: white;
             transition: fill .2s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 

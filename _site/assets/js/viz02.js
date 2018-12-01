@@ -98,15 +98,41 @@ function anchoredTooltip(event, el) {
     summonTooltip();
 }
 
-// function followTooltip(event) {
-//     var x = event.clientX;
-//     var y = event.clientY;
-//     tooltip.style.left = x + 'px';
-//     tooltip.style.top = y + 'px';
-// }
-// document.addEventListener('mousemove', function(event) {
-//     followTooltip(event);
-// }, false);
+function updateTooltipPos(e, el) {
+    var x = e.clientX;
+    var y = e.clientY;
+
+    elWidth = el.getBoundingClientRect().width + 20;
+    elLeft = el.getBoundingClientRect().left;
+
+    elHeight = el.getBoundingClientRect().height + 20;
+    elBottom = el.getBoundingClientRect().bottom;
+
+    clientHeight = document.documentElement.clientHeight;
+    clientWidth = document.documentElement.clientWidth;
+
+    // console.log(clientWidth - elWidth);
+    // console.log(elLeft);
+
+    if (clientWidth - x <= elWidth && clientHeight - y <= elHeight) {
+        el.style.left = x - (x + elWidth - clientWidth) + 'px';
+        el.style.top = y - (y + elHeight - clientHeight) + 'px';
+    } else if (clientWidth - x >= elWidth && clientHeight - y <= elHeight) {
+        el.style.left = x + 'px'
+        el.style.top = y - (y + elHeight - clientHeight) + 'px';
+    } else if (clientWidth - x <= elWidth && clientHeight - y >= elHeight) {
+        el.style.left = x - (x + elWidth - clientWidth) + 'px';
+        el.style.top = y + 'px';
+    } else if (x < clientWidth - elWidth || y < clientWidth - elWidth) {
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+    }
+
+    return {
+        x: x,
+        y: y
+    }
+}
 
 function summonTooltip(text) {
     for (t = 0; t < entries.length; t++) {
