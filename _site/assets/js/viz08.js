@@ -111,6 +111,21 @@ $(document).ready((function(){
 //     });
 // });
 
+$(document).ready((function(){
+    $('.b-toggle').hover(function() {
+      $(".b-toggle-rosso").attr("height", "48.3");
+      $(".b-toggle-rosso").attr("width", "86");
+      $(".b-toggle-rosso").attr("x", "41.2");
+      $(".b-toggle-rosso").attr("y", "426.2");
+    }, function() {
+        $(".b-toggle-rosso").attr("height", "40.3");
+        $(".b-toggle-rosso").attr("width", "78"); 
+        $(".b-toggle-rosso").attr("x", "45.2"); 
+        $(".b-toggle-rosso").attr("y", "430.2"); 
+    })
+  })
+);
+
 $(document).ready(function(){
     $(".b-toggle").click(function(){
         $(".b-toggle-box").toggleClass("b-toggle-box-on")
