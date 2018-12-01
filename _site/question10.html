@@ -140,34 +140,46 @@
             pointer-events: fill;
             cursor: pointer;
         }
-        .toggle:hover > rect {
+
+        .toggle:hover>rect {
             opacity: 1;
         }
-        .toggle:hover > text {
+
+        .toggle:hover>text {
             fill: var(--color-main-2);
             font-family: 'Mono Text'
         }
-        .toggle.active > rect {
+
+        .toggle.active>rect {
             fill: var(--color-main-2);
             opacity: 1;
         }
-        .toggle.active > text {
+
+        .toggle.active>text {
             fill: white;
         }
-        .toggle > text {
-            -webkit-touch-callout: none; /* iOS Safari */
-              -webkit-user-select: none; /* Safari */
-               -khtml-user-select: none; /* Konqueror HTML */
-                 -moz-user-select: none; /* Firefox */
-                  -ms-user-select: none; /* Internet Explorer/Edge */
-                      user-select: none; /* Non-prefixed version, currently
+
+        .toggle>text {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
                                             supported by Chrome and Opera */
         }
-          
+
         .nodes.fade {
             opacity: 0.05;
             transition: opacity .25s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
+
         .nodes {
             opacity: 1;
             transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -287,28 +299,28 @@
     </g>
     <g id="Toogles">
         <g class="toggle" id="nadine-strossen-toggle">
-                <rect x="44.8" y="666.3" class="st10" width="176.3" height="41.5" />
-                <text transform="matrix(1 0 0 1 60.9834 691.7842)" class="st7 st8 st9">Nadine Strossen</text>
+            <rect x="44.8" y="666.3" class="st10" width="176.3" height="41.5" />
+            <text transform="matrix(1 0 0 1 60.9834 691.7842)" class="st7 st8 st9">Nadine Strossen</text>
         </g>
         <g class="toggle" id="us-toggle">
-                <rect x="44.8" y="575.3" class="st10" width="176.3" height="41.5" />
-                <text transform="matrix(1 0 0 1 113.7827 600.8699)" class="st7 st8 st9">U.S.</text>
+            <rect x="44.8" y="575.3" class="st10" width="176.3" height="41.5" />
+            <text transform="matrix(1 0 0 1 113.7827 600.8699)" class="st7 st8 st9">U.S.</text>
         </g>
         <g class="toggle" id="germany-toggle">
-                <rect x="44.8" y="523.4" class="st10" width="176.3" height="41.5" />
-                <text transform="matrix(1 0 0 1 99.3828 548.9555)" class="st7 st8 st9">Germany</text>
+            <rect x="44.8" y="523.4" class="st10" width="176.3" height="41.5" />
+            <text transform="matrix(1 0 0 1 99.3828 548.9555)" class="st7 st8 st9">Germany</text>
         </g>
         <g class="toggle" id="twitter-toggle">
-                <rect x="44.8" y="432.5" class="st10" width="176.3" height="41.5" />
-                <text transform="matrix(1 0 0 1 99.3828 458.0408)" class="st7 st8 st9">Twitter</text>
+            <rect x="44.8" y="432.5" class="st10" width="176.3" height="41.5" />
+            <text transform="matrix(1 0 0 1 99.3828 458.0408)" class="st7 st8 st9">Twitter</text>
         </g>
         <g class="toggle" id="google-toggle">
-                <rect x="44.8" y="380.6" class="st10" width="176.3" height="41.5" />
-                <text transform="matrix(1 0 0 1 104.1828 406.1262)" class="st7 st8 st9">Google</text>
+            <rect x="44.8" y="380.6" class="st10" width="176.3" height="41.5" />
+            <text transform="matrix(1 0 0 1 104.1828 406.1262)" class="st7 st8 st9">Google</text>
         </g>
         <g class="toggle" id="facebook-toggle">
-                <rect x="44.8" y="328.7" class="st10" width="176.3" height="41.5" />
-                <text transform="matrix(1 0 0 1 94.583 354.2117)" class="st7 st8 st9">Facebook</text>
+            <rect x="44.8" y="328.7" class="st10" width="176.3" height="41.5" />
+            <text transform="matrix(1 0 0 1 94.583 354.2117)" class="st7 st8 st9">Facebook</text>
         </g>
     </g>
     <g class="nodes" id="Mappa_completa">
@@ -1968,7 +1980,7 @@
                 <text transform="matrix(1 0 0 1 836.3285 799.0778)" class="st4 st6 st18">Reuters</text>
             </g>
             <g>
-                <text transform="matrix(1 0 0 1 866.4932 704.5801)" class="st4 st6 st18">Twitter</text>
+                <text transform="matrix(1 0 0 1 866.4932 704.5801)" class="st4 st8 st18">Twitter</text>
             </g>
             <g>
                 <text transform="matrix(1 0 0 1 539.0317 157.978)" class="st4 st6 st18">The Rubin Report</text>
@@ -2046,12 +2058,6 @@
             </g>
             <g>
                 <text transform="matrix(1 0 0 1 788.3289 623.5666)" class="st4 st6 st18">Silicon Valley Watcher</text>
-            </g>
-            <g>
-                <text transform="matrix(1 0 0 1 707.7287 584.4973)" class="st4 st8 st18">Google</text>
-            </g>
-            <g>
-                <text transform="matrix(1 0 0 1 707.7287 584.4973)" class="st4 st8 st18">Google</text>
             </g>
             <g>
                 <text transform="matrix(1 0 0 1 857.629 583.9774)" class="st4 st6 st18">The Washington Times</text>
@@ -2146,12 +2152,6 @@
             <text transform="matrix(1 0 0 1 887.2283 1014.1176)" class="st4 st8 st18">Two Hat Security</text>
             <g>
                 <text transform="matrix(1 0 0 1 741.3304 945.9772)" class="st4 st6 st18">The Conversation</text>
-            </g>
-            <g>
-                <text transform="matrix(1 0 0 1 710.0285 800.1661)" class="st4 st8 st18">Facebook</text>
-            </g>
-            <g>
-                <text transform="matrix(1 0 0 1 710.0285 800.1661)" class="st4 st8 st18">Facebook</text>
             </g>
             <g>
                 <text transform="matrix(1 0 0 1 692.2285 750.5769)" class="st4 st6 st18">Fb&apos;s user</text>
@@ -2516,7 +2516,7 @@
             </g>
         </g>
         <g>
-            <text transform="matrix(1 0 0 1 866.4932 704.5801)" class="st4 st6 st18">Twitter</text>
+            <text transform="matrix(1 0 0 1 866.4932 704.5801)" class="st4 st8 st18">Twitter</text>
         </g>
         <path class="st16" d="M855.4,700.2c-1.9,0-3.6,0.6-5,1.6c-1.5,1.1-2.6,2.6-3.1,4.3c-0.3,0.8-0.4,1.7-0.4,2.7c0,0.9,0.2,1.8,0.4,2.7
 		c0.6,1.7,1.7,3.2,3.1,4.3l5-7V700.2L855.4,700.2z" />
@@ -2703,6 +2703,9 @@
     </g>
     <g class="nodes" id="Google">
         <g>
+            <text transform="matrix(1 0 0 1 707.7287 584.4973)" class="st4 st8 st18">Google</text>
+        </g>
+        <g>
             <g>
                 <path class="st11" d="M721.2,471.5c3.1,27.8-7.1,88.9-18.7,109.5" />
                 <g>
@@ -2835,6 +2838,9 @@
         </g>
     </g>
     <g class="nodes" id="Facebook">
+        <g>
+            <text transform="matrix(1 0 0 1 710.0285 800.1661)" class="st4 st8 st18">Facebook</text>
+        </g>
         <g>
             <g>
                 <path class="st12" d="M630.1,694.5c24,7.9,43.8,47.1,46.9,77.9" />
