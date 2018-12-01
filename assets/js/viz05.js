@@ -163,9 +163,9 @@ $(document).ready((function(){
 );
 
 
-// -------------------------------- //
-// ---- Toggle categorie sopra ---- //
-// -------------------------------- //
+// ----------------------------------- //
+// ---- Toggle categorie sinistra ---- //
+// ----------------------------------- //
 
 siteList = document.querySelectorAll(".site-name");
 
@@ -186,15 +186,16 @@ $(document).ready((function(){
 
       // cerco il match
       $(".site-name").each(function(){
-        if (dataArrayInt.includes($(this).data('sitenumber'))) {
-          console.log("cazzo si");
+        if (dataArrayInt.includes($(this).data('sitenumber')) == false) {
           $(this).toggleClass('off');
         }
       });
 
-      
-
-      
+      $(".circles-up").each(function(){
+        if (dataArrayInt.includes($(this).data('circlenumber')) == false) {
+          $(this).toggleClass('off');
+        }
+      });
 
       // if dataArray.includes(i) 
       // lista di pallini queryselectorall (.site-circle)
@@ -206,15 +207,49 @@ $(document).ready((function(){
         dataArrayInt.pop();
         // console.log("removed");
       }
+      $(".circles-up").removeClass('off');
+      $(".site-name").removeClass('off');
+      $('.cat-sx').removeClass('off');
+    })
+  })
+);
+
+
+// -------------------------------- //
+// ---- Toggle categorie sopra ---- //
+// -------------------------------- //
+
+$(document).ready((function(){
+    $('.site-name, .circles-up').hover(function() {
+      if (this.classList.contains('site-name')){
+        var n = $(this).data('sitenumber');
+        console.log(n);
+      } else {
+        var n = $(this).data('circlenumber');
+        console.log(n);
+      }
 
       $(".site-name").each(function(){
-        if (dataArrayInt.includes($(this).data('sitenumber'))) {
-          console.log("cazzo si");
+        if ($(this).data('sitenumber') != n) {
           $(this).toggleClass('off');
         }
       });
 
-      $('.cat-sx').removeClass('off');
+      $(".circles-up").each(function(){
+        if ($(this).data('circlenumber') != n) {
+          $(this).toggleClass('off');
+        }
+      });
+
+      $(".circleid").each(function(){
+        if ($(this).data('circleid') != n) {
+          $(this).toggleClass('off');
+        }
+      });
+
+    }, function() {
+      $('.site-name, .circles-up').removeClass('off');
+      $(".circleid").removeClass('off');
     })
   })
 );

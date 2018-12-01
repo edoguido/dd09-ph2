@@ -68,6 +68,11 @@ cat-sx  Categorie a sinistra (lista)
     transition: opacity .45s cubic-bezier(.65, 0, .15, 1);
 }
 
+.site-name {
+    transition: fill .45s cubic-bezier(.65, 0, .15, 1),
+    opacity .45s cubic-bezier(.65, 0, .15, 1);
+}
+
 /* --- FONT --- */
 .st52{font-family:'Mono Medium';}
 .st53{font-size:14px;}
