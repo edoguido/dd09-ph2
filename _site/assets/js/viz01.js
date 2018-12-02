@@ -77,13 +77,24 @@ for (var i = 0; i < ball.length; i++) {
     }, false);
 }
 
+var websites = document.getElementsByTagName('circle');
+
+for (i = 0; i < websites.length; i++) {
+    websites[i].addEventListener('click', function (event) {
+        var url = event.target.getAttribute('js-link');
+        if (url != 'http://en.wikipedia.org/wiki/Hate_speech') {
+            window.open(url, '_blank');
+        } else return;
+    }, false);
+}
+
+
 var wiki = document.getElementById('wiki-ball_9_');
 
 wiki.addEventListener('click', function (event) {
     updateTooltipPos(event, tooltip);
 
-    var siteName = 'en.wikipedia.org/wiki/Hate_speech';
-    var url = 'http://' + siteName + '';
+    var url = wiki.getAttribute('js-link');
 
     if (tooltip.classList.contains('summon') && wiki.style.cursor == 'pointer') {
         wiki.style.cursor = 'default';
