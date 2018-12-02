@@ -79,6 +79,106 @@ function getAllElementsWithAttribute(attribute) {
             matchingElements.push(allElements[i]);
         }
     }
-    console.log(matchingElements);
+    // console.log(matchingElements);
     return matchingElements;
+}
+
+
+// -------------------- //
+// ---- IL TOOLTIP ---- //
+// -------------------- //
+
+var tooltip = document.createElement('div');
+tooltip.id = 'tooltip';
+tooltip.innerHTML = '';
+document.body.appendChild(tooltip);
+toolTxt = document.createElement('p');
+tooltip.appendChild(toolTxt);
+
+document.addEventListener('mousemove', function (event) {
+    updateTooltipPos(event, tooltip);
+}, false)
+
+function updateTooltipPos(e, el) {
+    var x = e.clientX;
+    var y = e.clientY;
+
+    elWidth = el.getBoundingClientRect().width + 20;
+    elLeft = el.getBoundingClientRect().left;
+
+    elHeight = el.getBoundingClientRect().height + 20;
+    elBottom = el.getBoundingClientRect().bottom;
+
+    clientHeight = document.documentElement.clientHeight;
+    clientWidth = document.documentElement.clientWidth;
+
+    // console.log(clientWidth - elWidth);
+    // console.log(elLeft);
+
+    if (clientWidth - x <= elWidth && clientHeight - y <= elHeight) {
+        el.style.left = x - (x + elWidth - clientWidth) + 'px';
+        el.style.top = y - elHeight - 20 + 'px';
+
+    } else if (clientWidth - x >= elWidth && clientHeight - y <= elHeight) {
+        el.style.left = x + 'px'
+        el.style.top = y - (y + elHeight - clientHeight) + 'px';
+
+    } else if (clientWidth - x <= elWidth && clientHeight - y >= elHeight) {
+        el.style.left = x - (x + elWidth - clientWidth) + 'px';
+        el.style.top = y + 'px';
+
+    } else if (x < clientWidth - elWidth || y < clientWidth - elWidth) {
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
+    }
+
+    return {
+        x: x,
+        y: y
+    }
+}
+
+loadJSON();
+
+function loadJSON() {
+
+    var file = "/assets/about.json";
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            storeJSONData(xobj.responseText);
+        }
+    };
+    xobj.send(null);
+}
+
+function storeJSONData(jsonObject) {
+    var parsed = JSON.parse(jsonObject);
+    console.log(parsed);
+    cluster.forEach(element => {
+        element.addEventListener('mouseover', function (e) {
+
+            // PRIMA DI PRENDERE IL COMMENTO A CASO DEVI PRENDERE QUELLI DEL CLUSTER HOVERATO
+            var whichOpinion = this.id.replace('c', '');
+            
+            var selectedEls = [];
+            parsed.forEach(element => {
+                if (element.opinion == whichOpinion) {
+                    selectedEls.push(element);
+                } else return false;
+            })
+            var randomCommentNumber = getRandomInt(1, selectedEls.length);
+            var randomComment = selectedEls[randomCommentNumber - 1];
+            selectEntry(randomComment);
+        }, false);
+    });
+}
+
+function injectComment(content, target) {
+    // console.log(content);
+    target.innerHTML = "&lsquo;" + content.body + "&rsquo;" + "<br><br>" + 
+    "Tree: " + content.tree + " (Level " + content.level + ")";
 }
