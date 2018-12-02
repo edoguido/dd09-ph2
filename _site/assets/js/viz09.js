@@ -9,7 +9,7 @@ for (var i = 0; i < cluster.length; i++) {
                 cluster[t].classList.add('fade');
                 tooltip.classList.add('summon');
             }
-            injectComment(toIgnore, tooltip);
+            // injectComment(toIgnore, tooltip);
         }
     }, false);
     thisCluster.addEventListener('mouseout', function () {
@@ -26,7 +26,7 @@ tooltip.innerHTML = '';
 document.body.appendChild(tooltip);
 
 document.addEventListener('mousemove', function () {
-    updateTooltipPos(event, tooltip);    
+    updateTooltipPos(event, tooltip);
     // var currentDepth = checkDepth(event, gridYLevels);
     // var currentOpinion = checkOpinion(event, gridXLevels);
     // console.log("Current depth: " + currentDepth);
@@ -58,8 +58,8 @@ function updateTooltipPos(e, el) {
         el.style.left = x - (x + elWidth - clientWidth) + 'px';
         el.style.top = y + 'px';
     } else if (x < clientWidth - elWidth || y < clientWidth - elWidth) {
-            el.style.left = x + 'px';
-            el.style.top = y + 'px';
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
     }
 
     return {
@@ -67,11 +67,26 @@ function updateTooltipPos(e, el) {
         y: y
     }
 }
-function injectComment(data, target) {
-    // console.log(data);
-    var attribute = data.getAttribute('js-comment');
-    target.innerHTML = attribute;
-}
+
+
+
+
+/* -------------------------------------------------------------- */
+/* -----------       METTE COMMENTO NEL TOOLTIP       ----------- */
+/* -------------------------------------------------------------- */
+
+// function injectComment(data, target) {
+//     // console.log(data);
+//     var attribute = data.getAttribute('js-comment');
+//     target.innerHTML = attribute;
+// }
+
+/* -------------------------------------------------------------- */
+/* -----------       METTE COMMENTO NEL TOOLTIP       ----------- */
+/* -------------------------------------------------------------- */
+
+
+
 
 // var grid = document.getElementById('griglia');
 // var gridYLevels = getLevelCoordinates('h-line');
@@ -135,17 +150,67 @@ function svgPoint(element, x, y) {
     return output;
 }
 
-function loadJSON(callback) {
 
-    var file = 'my_data.json';
+
+/* ------------------------------------------------ */
+/* -----------       LETTURA JSON       ----------- */
+/* ------------------------------------------------ */
+
+loadJSON();
+
+function loadJSON() {
+
+    var file = "/assets/js/comments.json";
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
+            storeJSONData(xobj.responseText);
         }
     };
     xobj.send(null);
+}
+
+
+function storeJSONData(jsonObject) {
+    var parsed = JSON.parse(jsonObject);
+    cluster.forEach(element => {
+        element.addEventListener('mouseover', function () {
+
+            // PRIMA DI PRENDERE IL COMMENTO A CASO DEVI PRENDERE QUELLI DEL CLUSTER SELEZIONATO
+            var randomCommentNumber = getRandomInt(1, parsed.length);
+            var randomComment = parsed[randomCommentNumber - 1];
+
+            var whichOpinion = this.id.replace('c', '');
+            console.log(whichOpinion);
+            console.log(randomComment.opinion);
+
+            if (randomComment.opinion == whichOpinion) {
+                selectEntry(randomComment);
+            } else injectComment('', tooltip);
+        }, false);
+    });
+}
+
+// cluster.forEach(element => {
+//     element.addEventListener('mouseout', function () {
+//         injectComment('', tooltip);
+//     }, false);
+// });
+
+function selectEntry(el) {
+    injectComment(el.body, tooltip);
+}
+
+function injectComment(content, target) {
+    // console.log(content);
+    target.innerHTML = content;
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
