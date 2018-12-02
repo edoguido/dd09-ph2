@@ -34,3 +34,4 @@ From the same Excel file we manually clustered the 618 comments of the two conve
 ##### Data Source: [Kialo](https://kialo.com){:target="_blank"}, [Custom Python script](https://github.com/drivinward/Kialo-Parser){:target="_blank"}, [IBM Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/){:target="_blank"}
 ##### Timestamp: 11/19/2018
 ##### [View Data (258 KB)](/assets/datasets/4.xlsx)
+##### [View python script (258 KB)](/assets/kialo_parser.py)
