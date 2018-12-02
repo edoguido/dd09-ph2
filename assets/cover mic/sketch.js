@@ -77,9 +77,9 @@ console.log(contatore);
 
     for (var i = 0; i < giroCompleto; i+=1) {
       //stroke(800, t, 100)
-      strokeWeight(3);
+      // strokeWeight(4/i);
       var ang = map(i, 0, giroCompleto, 0, TWO_PI);
-      var rad = 900 * noise(i * 0.01, t * 0.005);
+      var rad = 600 * noise(i * 0.01, t * 0.005);
       var x = rad * cos(ang);
       var y = rad * sin(ang);
       vertex(x, y);
@@ -87,12 +87,12 @@ console.log(contatore);
 
   endShape(CLOSE);
 
-  t += 0.5;
+  t += 0.35;
 
+// }
+  // clear the background every 600 frames using mod (%) operator
+  // if (frameCount % 600 == 0) {
+	// background(255);
+  // }
 
-
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
 }
