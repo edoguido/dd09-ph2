@@ -14,6 +14,8 @@ The radius that defines the dimensions of the circles corresponds to the Network
 
 ### Protocol
 
+<img src="{{ '/assets/images/protocols/example-protocol.png' | relative_path }}">
+
 We based this very first protocol on the classification made by [Alexa](https://www.alexa.com/){:target="_blank"}{:style="cursor: alias;"}, using the Share Of Voice tool. We queried “Hate Speech” and we manually scraped the data about all the sites that Alexa gave back, organizing them by ordered rows, which correspond to the position in the rank. Each site that resulted from Alexa was assigned to one of the six categories that we had defined: “Organizations/Association”, “News”, “Social Network/Media Company”, “Reference”, “University” and “Forum”. 
 
 At this point we decided to go even deeper, analyzing the various definitions of Hate Speech that were given by those sites. During the examination emerged seven different categories that sum up the main opinions about the debate: “Hate speech leads to hate crime”, “Hate speech is harmful and needs to be regulated”, “Hate speech must be fought with more speech”, “We still don’t know what hate speech is”, “Hate speech is hate speech only when it causes real reactions”, “Hate speech is free speech”, “Hate speech is a construct used to kill free speech”. The Excel file that resulted was uploaded on [RawGraphs](https://rawgraphs.io/){:target="_blank"}{:style="cursor: alias;"} in order to start displaying the data; the resulting SVG file was later refined with Adobe Illustrator.

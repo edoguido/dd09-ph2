@@ -1,7 +1,10 @@
+
+
 $(document).ready((function(){
     $('.node').hover(function() {
       $(this).toggleClass('on');
     //   console.log("ciao");
+
     }, function() {
         $(this).toggleClass('on');
     })

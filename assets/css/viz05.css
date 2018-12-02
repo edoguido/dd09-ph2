@@ -72,6 +72,9 @@ cat-sx  Categorie a sinistra (lista)
 .giallo-rect{stroke:#F2C005; fill:white; stroke-width:1}
 .giallo-rect-on{stroke:#F2C005; fill:#F2C005; stroke-width:1}
 
+.site-name {
+    cursor: pointer;
+}
 
 
 /* ---- css ---- */
