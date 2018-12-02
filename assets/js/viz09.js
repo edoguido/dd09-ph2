@@ -160,7 +160,7 @@ loadJSON();
 
 function loadJSON() {
 
-    var file = "/assets/js/comments.json";
+    var file = "/assets/js/kialo.json";
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
