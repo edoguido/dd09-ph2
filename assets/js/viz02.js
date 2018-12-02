@@ -70,7 +70,7 @@ entries = document.querySelectorAll('.page-entry');
 createds = document.querySelectorAll('.page-entry > g > polygon.st7');
 
 for (i = 0; i < entries.length; i++) {
-    entries[i].addEventListener('mouseover', (event) => {
+    entries[i].addEventListener('mouseover', (e) => {
         currentEntry = entries[i];
         for (t = 0; t < entries.length; t++) {
             // // console.log(entries[t].childNodes[t]);
@@ -78,22 +78,39 @@ for (i = 0; i < entries.length; i++) {
             // currentCreateds = createds[t];
             // if (currentEntry.matches('.page-entry:hover')) {
             //     if (entries.indexOf == (4 || 11 || 15 || 18)) {
-            //         anchoredTooltip(event, entries[t])
-            //     } else anchoredTooltip(event, currentCreateds);
+            //         anchoredTooltip(e, entries[t])
+            //     } else anchoredTooltip(e, currentCreateds);
             // }
             if (entries[t].matches('.page-entry:hover')) {
-                anchoredTooltip(event, createds[t]);
-            } else anchoredTooltip(event, entries[t]);
+                anchoredTooltip(e, createds[t]);
+            } else anchoredTooltip(e, entries[t]);
         }
     }, false);
     entries[i].addEventListener('mouseleave', hideTooltip, false);
 }
 
+var datesLines = document.getElementsByClassName('date-line');
 
-function anchoredTooltip(event, el) {
-    // console.log(el.getBoundingClientRect().left);
+for (i = 0; i < datesLines.length; i++) {
+    datesLines[i].addEventListener('mouseover', function () {
+        lawsRect.forEach(element => {
+            // console.log(element);
+            if (element.id == this.id) {
+                element.classList.add('active');
+                return;
+            }
+        })
+    }, false);
+    datesLines[i].addEventListener('mouseout', function () {
+        lawsRect.forEach(element => {
+            element.classList.remove('active');
+        })
+    }, false);
+}
+
+function anchoredTooltip(e, el) {
     var x = el.getBoundingClientRect().left;
-    var y = event.clientY;
+    var y = e.clientY;
     tooltip.style.left = x + 'px';
     tooltip.style.top = y - 20 + 'px';
     summonTooltip();
@@ -112,9 +129,6 @@ function updateTooltipPos(e, el) {
     clientHeight = document.documentElement.clientHeight;
     clientWidth = document.documentElement.clientWidth;
 
-    // console.log(clientWidth - elWidth);
-    // console.log(elLeft);
-
     if (clientWidth - x <= elWidth && clientHeight - y <= elHeight) {
         el.style.left = x - (x + elWidth - clientWidth) + 'px';
         el.style.top = y - (y + elHeight - clientHeight) + 'px';
@@ -125,8 +139,8 @@ function updateTooltipPos(e, el) {
         el.style.left = x - (x + elWidth - clientWidth) + 'px';
         el.style.top = y + 'px';
     } else if (x < clientWidth - elWidth || y < clientWidth - elWidth) {
-            el.style.left = x + 'px';
-            el.style.top = y + 'px';
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
     }
 
     return {
