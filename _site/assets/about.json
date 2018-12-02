@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "link": "http://test.com",
+        "name": "che nome ha",
+        "clusters": [
+            "freedom of expression",
+            "source of information"
+        ],
+        "body": "contenuto pagina about"
+    },
+    {
+        "id": 1,
+        "link": "http://test.com",
+        "name": "che nome ha",
+        "clusters": [
+            "freedom of expression",
+            "source of information"
+        ],
+        "body": "contenuto pagina about"
+    }
+]

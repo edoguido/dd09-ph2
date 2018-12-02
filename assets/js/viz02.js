@@ -89,6 +89,7 @@ for (i = 0; i < entries.length; i++) {
     entries[i].addEventListener('mouseleave', hideTooltip, false);
 }
 
+
 function anchoredTooltip(event, el) {
     // console.log(el.getBoundingClientRect().left);
     var x = el.getBoundingClientRect().left;
