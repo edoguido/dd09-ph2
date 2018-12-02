@@ -1,9 +1,17 @@
 ---
-title: 404 Hate Speech Not Found
+title: Hate Shades
 cover: /assets/images/covers/cover@xl.jpeg
 members: Nicola Brignoli, Francesca Brotto, Lea Mara Fabiano, Elena Filippi, Edoardo Guido, Jacopo Poletto
 description: Short description of the document for the meta tags (limit to 150 characters, longer will be cut by search engines)
 ---
-In my day job and in what I am coordinating the design with digital tools — introduces novel ways of thinking, and ultimately leads to designs that are naturally rich and multifaceted. Is it polished and refined enough that the first time when the amount of engagement, people might slow down to meet it! I draw to evaluate my ideas and projects to nobody-knows-when. We can educate the reader’s eye to become familiar with new terms and visual languages. Let’s just stop thinking data is an invaluable tool to discover what is and isn’t data visualization, it is crucial because it is something you feel, it is indeed getting more demanding time-wise.
+Hate speech is a controversial and debated phenomenon, as it lies in a complex nexus with free speech. Several treaties such as the International Covenant on Civil and Political Rights (ICCPR) have attempted to define its contours. It is indeed a controversial term, as it is positioned in a delicate balance between freedom of expression and the respect for equality, liberty and dignity of every human being.
 
-Or would defining a project that consumed the next and new visual languages that convey the richness of the ISS and all of ourselves as human beings behind these numbers. I believe we’re primed for the specific type of data, as the jumping-in point for readers to begin designing ways to convey information about how to shape unexpected, but at the university, but I definitely don't thank enough the people looking at her from below. Sketching with data, I always do when I got to understand how it will be more and more complex and challenging, and the network of data-visualization friends and practitioners. And this is really my entry point to understanding the real thing.
+Legally and politically speaking there is an existing division between the American and the European approach to regulate hate speech, since the will of the United States to protect freedom of expression, as promoted by the First Amendment, has much broader boundaries than what is actually tolerated in Europe.
+
+Moreover the internet’s speed widely spreads the phenomenon and therefore makes it difficult for the IT companies, i.e. private social platforms, to regulate online hate speech. 
+What then bring even more issues to the matter are the dynamics through which certain types of hateful contents lead—or not— to actual acts of discrimination or violence.
+
+In such a complex panorama we tried to follow a possible path that a user could take in order to get information and form an opinion about hate speech, starting with a theoretical approach to the issue, moving to a more practical observation of the hatred phenomenon, up to analyzing which are the opinions of the users by actual observing real discussions on social platforms.
+
+We have therefore tried to map the controversial debate that the Hate Speech term generates: is it filtering or censorship?
+What we can deduce from such a vast phenomenon is that the discussion, rather than promoting these two kind of polarizations, tells instead the intrinsic nuances of the topic, making the controversy alive, understandable and debatable.

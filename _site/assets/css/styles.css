@@ -3,6 +3,7 @@
 @font-face { font-family: 'Mono Text'; src: url("../font/IBMPlexMono/IBMPlexMono-Text.otf"); }
 @font-face { font-family: 'Mono Medium'; src: url("../font/IBMPlexMono/IBMPlexMono-Medium.otf"); }
 @font-face { font-family: 'Mono SemiBold'; src: url("../font/IBMPlexMono/IBMPlexMono-SemiBold.otf"); }
+@font-face { font-family: 'Mono Bold'; src: url("../font/IBMPlexMono/IBMPlexMono-Bold.otf"); }
 @font-face { font-family: 'Sans Regular'; src: url("../font/IBMPlexSans/IBMPlexSans-Regular.otf"); }
 @font-face { font-family: 'Sans SemiBold'; src: url("../font/IBMPlexSans/IBMPlexSans-SemiBold.otf"); }
 html { --color-main: #F78028; --color-main-2: #0033FF; --color-dark: #2a2a2a; --color-light: #fbfef9; --font-display: 'Sans SemiBold', sans-serif; --font-text: 'Sans Regular', sans-serif; }
@@ -123,7 +124,7 @@ main.content { margin: 5.5rem auto 5rem; }
 
 .research__title span:after { content: ""; position: absolute; width: 112%; height: 3px; bottom: -7px; left: -6%; background-color: var(--color-dark); }
 
-.research__map { min-height: 70vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.research__map { min-height: 70vh; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .question__heading { display: grid; grid-template-rows: 8rem 1.4rem 7.4rem; grid-template-columns: repeat(12, calc(100% / 12)); margin-top: 2rem; }
 
