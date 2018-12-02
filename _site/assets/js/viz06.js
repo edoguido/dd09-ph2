@@ -155,30 +155,41 @@ function loadJSON() {
     xobj.send(null);
 }
 
+var circles = document.querySelectorAll('a > circle');
+
+// circles.forEach(element => {
+//     console.log(element);
+//     element.addEventListener('mouseover', function(e) {
+//         tooltip.classList.add('summon');
+//     }, false);
+// })
+
 function storeJSONData(jsonObject) {
     var parsed = JSON.parse(jsonObject);
-    console.log(parsed);
-    cluster.forEach(element => {
+    // console.log(parsed);
+    circles.forEach(element => {
         element.addEventListener('mouseover', function (e) {
+            elId = element.getAttribute('js-id');
+            tooltip.classList.add('summon');
 
-            // PRIMA DI PRENDERE IL COMMENTO A CASO DEVI PRENDERE QUELLI DEL CLUSTER HOVERATO
-            var whichOpinion = this.id.replace('c', '');
-            
-            var selectedEls = [];
             parsed.forEach(element => {
-                if (element.opinion == whichOpinion) {
-                    selectedEls.push(element);
-                } else return false;
+                if (elId == element.id) {
+                    // console.log(element.id);
+
+                    // tooltip con dati dell'element
+                    injectComment(element, tooltip);
+                }
             })
-            var randomCommentNumber = getRandomInt(1, selectedEls.length);
-            var randomComment = selectedEls[randomCommentNumber - 1];
-            selectEntry(randomComment);
+        }, false);
+        element.addEventListener('mouseout', function() {
+            tooltip.classList.remove('summon');
         }, false);
     });
 }
 
 function injectComment(content, target) {
     // console.log(content);
-    target.innerHTML = "&lsquo;" + content.body + "&rsquo;" + "<br><br>" + 
-    "Tree: " + content.tree + " (Level " + content.level + ")";
+    target.innerHTML = content.name + '<br>' + 
+    (content.clusters.length == 1 ? 'Cluster: ' : 'Clusters: ') + content.clusters + '<br><br>' + 
+    content.body;
 }

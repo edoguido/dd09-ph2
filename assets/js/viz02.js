@@ -111,7 +111,7 @@ for (i = 0; i < datesLines.length; i++) {
 function anchoredTooltip(e, el) {
     var x = el.getBoundingClientRect().left;
     var y = e.clientY;
-    tooltip.style.left = x + 'px';
+    tooltip.style.left = x + 20 + 'px';
     tooltip.style.top = y - 20 + 'px';
     summonTooltip();
 }

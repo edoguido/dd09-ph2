@@ -3,6 +3,43 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 1540 1100" style="enable-background:new 0 0 1540 1100; max-height: 110vh;" xml:space="preserve">
     <style type="text/css">
+        /* Necessario per il tooltip */
+        #tooltip {
+            opacity: 0;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 15px;
+            position: fixed;
+            z-index: 1000;
+            width: 350px;
+            height: auto;
+
+            pointer-events: none;
+
+            border: solid 2px var(--color-main-2);
+            color: var(--color-main-2);
+            background-color: rgba(255, 255, 255, 0.75);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            transition: opacity .1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            box-sizing: border-box;
+
+            font-size: 15px;
+        }
+
+        #tooltip.summon {
+            opacity: 1;
+            transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        #tooltip>p {
+            margin: 0;
+            padding: 0;
+        }
+
         #labels_x5F_hateful_site,
         #labels_x5F_free_speech,
         #labels_x5F_defence_and_support,
@@ -158,63 +195,63 @@
         <circle class="st2" cx="786.06" cy="516.03" r="275.76" />
     </g>
     <g id="not_hate_site">
-        <a xlink: href="http://www.occidentaldissent.com/" target="blank">
-        <circle class="neutral" cx="853.61" cy="100.3" r="31.68" />
+        <a xlink:href="http://www.occidentaldissent.com/" target="blank">
+        <circle js-id="27" class="neutral" cx="853.61" cy="100.3" r="31.68" />
         </a>
-        <a xlink: href="Chimpout.com" target="blank">
-        <circle class="aggressive" cx="853.96" cy="180.65" r="31.68" />
+        <a xlink:href="Chimpout.com" target="blank">
+        <circle js-id="6" class="aggressive" cx="853.96" cy="180.65" r="31.68" />
         </a>
         <rect x="918.34" y="116.87" class="st3" width="42.56" height="33.35" />
     </g>
     <g id="academic">
-      <a xlink: href="" target="blank">
+      <a xlink:href="https://hbdchick.wordpress.com/" target="blank">
 
 
-        <circle class="neutral" cx="1125.51" cy="358.48" r="31.68" />
+        <circle js-id="14" class="neutral" cx="1125.51" cy="358.48" r="31.68" />
       </a>
 
-      <a xlink: href="http://www.humanphenotypes.net/" target="blank">
+      <a xlink:href="http://www.humanphenotypes.net/" target="blank">
 
-        <circle class="neutral" cx="1205.86" cy="358.48" r="31.68" />
+        <circle js-id="15" class="neutral" cx="1205.86" cy="358.48" r="31.68" />
       </a>
 
-      <a xlink: href="https://www.amren.com" target="blank">
+      <a xlink:href="https://www.amren.com" target="blank">
 
-        <circle class="convincing" cx="1165.68" cy="428.07" r="31.68" />
+        <circle js-id="2" class="convincing" cx="1165.68" cy="428.07" r="31.68" />
       </a>
 
-      <a xlink: href="http://angrywhitedude.com" target="blank">
+      <a xlink:href="http://angrywhitedude.com" target="blank">
 
-        <circle class="neutral" cx="1165.68" cy="288.9" r="31.68" />
+        <circle js-id="3" class="neutral" cx="1165.68" cy="288.9" r="31.68" />
       </a>
 
         <rect x="1242.41" y="281.49" class="st3" width="68.58" height="33.35" />
     </g>
     <g id="conversation_platform">
-      <a xlink: href="http://archive.is/http://therightstuff.biz/" target="blank">
+      <a xlink:href="http://archive.is/http://therightstuff.biz/" target="blank">
 
-        <circle class="aggressive" cx="1309.78" cy="554.63" r="31.68" />
+        <circle js-id="30" class="aggressive" cx="1309.78" cy="554.63" r="31.68" />
       </a>
 
         <rect x="1337.72" y="509.16" class="st3" width="47.47" height="29.34" />
     </g>
     <g id="defence_and_support">
-      <a xlink: href="https://www.stormfront.org/forum/index.php" target="blank">
+      <a xlink:href="https://www.stormfront.org/forum/index.php" target="blank">
 
-        <circle class="resentment" cx="1181.95" cy="700.38" r="31.68" />
+        <circle js-id="33" class="resentment" cx="1181.95" cy="700.38" r="31.68" />
       </a>
 
-      <a xlink: href="missionamerica.com" target="blank">
+      <a xlink:href="missionamerica.com" target="blank">
 
-        <circle class="fear" cx="1253.84" cy="736.26" r="31.68" />
+        <circle js-id="24" class="fear" cx="1253.84" cy="736.26" r="31.68" />
       </a>
 
-      <a xlink: href="kinsmanredeemer.com" target="blank">
+      <a xlink:href="kinsmanredeemer.com" target="blank">
 
-        <circle class="self-celebration" cx="1080.37" cy="718.32" r="31.68" />
+        <circle js-id="21" class="self-celebration" cx="1080.37" cy="718.32" r="31.68" />
       </a>
 
-      <a xlink: href="" target="blank">
+      <a xlink:href="" target="blank">
 
         <circle class="st12" cx="1217.89" cy="718.32" r="88.85" />
       </a>
@@ -223,27 +260,27 @@
         <rect x="1255.28" y="807.17" class="st3" width="68.58" height="47.96" />
     </g>
     <g id="free_speech">
-      <a xlink: href="https://www.tapatalk.com/groups/anthroscape/" target="blank">
+      <a xlink:href="https://www.tapatalk.com/groups/anthroscape/" target="blank">
 
-        <circle class="resentment" cx="948.51" cy="991.91" r="31.68" />
+        <circle js-id="4" class="resentment" cx="948.51" cy="991.91" r="31.68" />
       </a>
 
-      <a xlink: href="http://assatashakur.org" target="blank">
+      <a xlink:href="http://assatashakur.org" target="blank">
 
-        <circle class="concitate" cx="908.33" cy="903.25" r="31.68" />
+        <circle js-id="5" class="concitate" cx="908.33" cy="903.25" r="31.68" />
       </a>
 
-      <a xlink: href="http://www.renewamerica.com/" target="blank">
+      <a xlink:href="http://www.renewamerica.com/" target="blank">
 
-        <circle class="self-celebration" cx="988.68" cy="903.25" r="31.68" />
+        <circle js-id="29" class="self-celebration" cx="988.68" cy="903.25" r="31.68" />
       </a>
 
-      <a xlink: href="http://www.forumbiodiversity.com" target="blank">
+      <a xlink:href="http://www.forumbiodiversity.com" target="blank">
 
-        <circle class="concitate" cx="948.51" cy="833.66" r="31.68" />
+        <circle js-id="11" class="concitate" cx="948.51" cy="833.66" r="31.68" />
       </a>
 
-      <a xlink: href="" target="blank">
+      <a xlink:href="" target="blank">
 
         <circle class="st12" cx="948.51" cy="991.91" r="48.67" />
       </a>
@@ -252,130 +289,130 @@
         <rect x="977.52" y="1006.91" class="st3" width="36.33" height="33.35" />
     </g>
     <g id="hateful_site">
-      <a xlink: href="https://web.archive.org/web/20171123203041/http://ironmarch.org/" target="blank">
+      <a xlink:href="https://web.archive.org/web/20171123203041/http://ironmarch.org/" target="blank">
 
-        <circle class="ironic" cx="666.98" cy="989.5" r="31.68" />
+        <circle js-id="17" class="ironic" cx="666.98" cy="989.5" r="31.68" />
       </a>
 
-      <a xlink: href="http://whitehonor.com/" target="blank">
+      <a xlink:href="http://whitehonor.com/" target="blank">
 
-        <circle class="self-celebration" cx="626.81" cy="919.92" r="31.68" />
+        <circle js-id="36" class="self-celebration" cx="626.81" cy="919.92" r="31.68" />
       </a>
 
-      <a xlink: href="http://niggermania.com/" target="blank">
+      <a xlink:href="http://niggermania.com/" target="blank">
 
-        <circle class="aggressive" cx="666.23" cy="850.93" r="31.68" />
+        <circle js-id="26" class="aggressive" cx="666.23" cy="850.93" r="31.68" />
       </a>
 
         <rect x="531.54" y="958.07" class="st3" width="68.58" height="31.44" />
-        <a xlink: href="https://moonbattery.com/" target="blank">
+        <a xlink:href="https://moonbattery.com/" target="blank">
 
-        <circle class="aggressive" cx="710.43" cy="919.92" r="31.68" />
+        <circle js-id="25" class="aggressive" cx="710.43" cy="919.92" r="31.68" />
       </a>
 
     </g>
     <g id="information">
-      <a xlink: href="https://www.europeanknightsproject.com" target="blank">
+      <a xlink:href="https://www.europeanknightsproject.com" target="blank">
 
-        <circle class="neutral" cx="695.89" cy="400.34" r="31.68" />
+        <circle js-id="10" class="neutral" cx="695.89" cy="400.34" r="31.68" />
       </a>
 
-      <a xlink: href="vdare.com" target="blank">
+      <a xlink:href="vdare.com" target="blank">
 
-        <circle class="neutral" cx="756.24" cy="347.3" r="31.68" />
+        <circle js-id="35" class="neutral" cx="756.24" cy="347.3" r="31.68" />
       </a>
 
-      <a xlink: href="https://islamqa.info/ar" target="blank">
+      <a xlink:href="https://islamqa.info/ar" target="blank">
 
-        <circle class="neutral" cx="889.62" cy="601.62" r="31.68" />
+        <circle js-id="18" class="neutral" cx="889.62" cy="601.62" r="31.68" />
       </a>
 
-      <a xlink: href="https://en.metapedia.org/wiki/Main_Page" target="blank">
+      <a xlink:href="https://en.metapedia.org/wiki/Main_Page" target="blank">
 
-        <circle class="neutral" cx="673.28" cy="477.49" r="31.68" />
+        <circle js-id="23" class="neutral" cx="673.28" cy="477.49" r="31.68" />
       </a>
 
-      <a xlink: href="https://www.wnd.com/" target="blank">
+      <a xlink:href="https://www.wnd.com/" target="blank">
 
-        <circle class="neutral" cx="764.35" cy="483.16" r="31.68" />
+        <circle js-id="37" class="neutral" cx="764.35" cy="483.16" r="31.68" />
       </a>
 
-      <a xlink: href="http://www.englisc-gateway.com/bbs/page/englisc-gateway" target="blank">
+      <a xlink:href="http://www.englisc-gateway.com/bbs/page/englisc-gateway" target="blank">
 
-        <circle class="neutral" cx="836.87" cy="517.76" r="31.68" />
+        <circle js-id="1" class="neutral" cx="836.87" cy="517.76" r="31.68" />
       </a>
 
-      <a xlink: href="https://www.rights.no/" target="blank">
+      <a xlink:href="https://www.rights.no/" target="blank">
 
-        <circle class="neutral" cx="868.06" cy="331.34" r="31.68" />
+        <circle js-id="16" class="neutral" cx="868.06" cy="331.34" r="31.68" />
       </a>
 
-      <a xlink: href="https://dailystormer.name" target="blank">
+      <a xlink:href="https://dailystormer.name" target="blank">
 
-        <circle class="severe" cx="617.85" cy="535.51" r="31.68" />
+        <circle js-id="8" class="severe" cx="617.85" cy="535.51" r="31.68" />
       </a>
 
-      <a xlink: href="unz.com" target="blank">
+      <a xlink:href="unz.com" target="blank">
 
-        <circle class="severe" cx="640.58" cy="612.92" r="31.68" />
+        <circle js-id="34" class="severe" cx="640.58" cy="612.92" r="31.68" />
       </a>
 
-      <a xlink: href="http://jewwatch.com/" target="blank">
+      <a xlink:href="http://jewwatch.com/" target="blank">
 
-        <circle class="resentment" cx="717.98" cy="688.98" r="31.68" />
+        <circle js-id="19" class="resentment" cx="717.98" cy="688.98" r="31.68" />
       </a>
 
-      <a xlink: href="http://en.rightpedia.info/w/" target="blank">
+      <a xlink:href="http://en.rightpedia.info/w/" target="blank">
 
-        <circle class="fear" cx="680.13" cy="321.55" r="31.68" />
+        <circle js-id="31" class="fear" cx="680.13" cy="321.55" r="31.68" />
       </a>
 
-      <a xlink: href="https://www.infowars.com/" target="blank">
+      <a xlink:href="https://www.infowars.com/" target="blank">
 
-        <circle class="fear" cx="793.49" cy="716.43" r="31.68" />
+        <circle js-id="20" class="fear" cx="793.49" cy="716.43" r="31.68" />
       </a>
 
-      <a xlink: href="http://realhistoryww.com/" target="blank">
+      <a xlink:href="http://realhistoryww.com/" target="blank">
 
-        <circle class="convincing" cx="695.89" cy="554.63" r="31.68" />
+        <circle js-id="28" class="convincing" cx="695.89" cy="554.63" r="31.68" />
       </a>
 
-      <a xlink: href="https://www.facebook.com/pg/LiberalLogic101/posts/" target="blank">
+      <a xlink:href="https://www.facebook.com/pg/LiberalLogic101/posts/" target="blank">
 
-        <circle class="convincing" cx="968.12" cy="617.99" r="31.68" />
+        <circle js-id="22" class="convincing" cx="968.12" cy="617.99" r="31.68" />
       </a>
 
-      <a xlink: href="http://ffaf.weebly.com|" target="blank">
+      <a xlink:href="http://ffaf.weebly.com|" target="blank">
 
-        <circle class="convincing" cx="779.51" cy="637.31" r="31.68" />
+        <circle js-id="12" class="convincing" cx="779.51" cy="637.31" r="31.68" />
       </a>
 
-      <a xlink: href="http://slymepit.com/phpbb/" target="blank">
+      <a xlink:href="http://slymepit.com/phpbb/" target="blank">
 
-        <circle class="ironic" cx="617.85" cy="419.46" r="31.68" />
+        <circle js-id="32" class="ironic" cx="617.85" cy="419.46" r="31.68" />
       </a>
 
-      <a xlink: href="https://www.thegatewaypundit.com/" target="blank">
+      <a xlink:href="https://www.thegatewaypundit.com/" target="blank">
 
-        <circle class="self-celebration" cx="790.5" cy="278.71" r="31.68" />
+        <circle js-id="13" class="self-celebration" cx="790.5" cy="278.71" r="31.68" />
       </a>
 
-      <a xlink: href="Document.no" target="blank">
+      <a xlink:href="http://document.no" target="blank">
 
-        <circle class="concitate" cx="830.57" cy="437.66" r="31.68" />
+        <circle js-id="9" class="concitate" cx="830.57" cy="437.66" r="31.68" />
       </a>
 
-      <a xlink: href="" target="blank">
+      <a xlink:href="" target="blank">
 
         <circle class="st12" cx="817.16" cy="477.49" r="95.06" />
       </a>
 
-      <a xlink: href="" target="blank">
+      <a xlink:href="" target="blank">
 
         <circle class="st12" cx="768.34" cy="678.77" r="95.06" />
       </a>
 
-      <a xlink: href="" target="blank">
+      <a xlink:href="" target="blank">
 
         <circle class="st12" cx="868.06" cy="331.34" r="48.67" />
       </a>
@@ -384,8 +421,8 @@
         <rect x="647.56" y="727.02" class="st3" width="60.95" height="29.35" />
         <rect x="877.94" y="463.51" class="st3" width="68.58" height="26.61" />
         <rect x="898.88" y="344.36" class="st3" width="68.58" height="31.44" />
-        <a xlink: href="https://www.conservapedia.com/index.php?title=Main_Page" target="blank">
-        <circle class="neutral" cx="916.83" cy="675.33" r="31.68" />
+        <a xlink:href="https://www.conservapedia.com/index.php?title=Main_Page" target="blank">
+        <circle js-id="7" class="neutral" cx="916.83" cy="675.33" r="31.68" />
         </a>
     </g>
     <g id="not_found">
