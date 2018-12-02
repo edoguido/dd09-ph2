@@ -14,7 +14,7 @@ The radius that defines the dimensions of the circles corresponds to the Network
 
 ### Protocol
 
-<img src="{{ '/assets/images/protocols/example-protocol.png' | relative_path }}">
+<img src="{{ '/assets/images/protocols/protocol-04.png' | relative_path }}">
 
 We based this very first protocol on the classification made by [Alexa](https://www.alexa.com/){:target="_blank"}{:style="cursor: alias;"}, using the Share Of Voice tool. We queried “Hate Speech” and we manually scraped the data about all the sites that Alexa gave back, organizing them by ordered rows, which correspond to the position in the rank. Each site that resulted from Alexa was assigned to one of the six categories that we had defined: “Organizations/Association”, “News”, “Social Network/Media Company”, “Reference”, “University” and “Forum”. 
 
