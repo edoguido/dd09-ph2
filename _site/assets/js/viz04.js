@@ -1,7 +1,10 @@
+
+
 $(document).ready((function(){
     $('.node').hover(function() {
       $(this).toggleClass('on');
     //   console.log("ciao");
+
     }, function() {
         $(this).toggleClass('on');
     })
@@ -92,3 +95,14 @@ for (var i = 0; i < ball.length; i++) {
         }
     }, false);
 }
+
+
+// Genero dinamicamente il link di wikipedia dall'attributo js-name
+
+$(document).ready((function(){
+    $(".node").each(function(){
+        var wikiLink = $(this).attr('js-name').split(' ').join('_');
+        $(this).parent().attr('href', "https://en.wikipedia.org/wiki/" + wikiLink);
+    });
+  })
+);

@@ -4,11 +4,16 @@
     transition: opacity .35s cubic-bezier(.65, 0, .15, 1);
     stroke: #0D3FFB;
     stroke-width: 1.5px;
+    
 }
 
 .edge {
     opacity: 0.90;
     transition: opacity .35s cubic-bezier(.65, 0, .15, 1);
+}
+
+circle:hover {
+
 }
 
 
