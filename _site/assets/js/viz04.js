@@ -24,8 +24,8 @@ document.body.appendChild(tooltip);
 toolTxt = document.createElement('p');
 tooltip.appendChild(toolTxt);
 
-document.addEventListener('mousemove', function (event) {
-    updateTooltipPos(event, tooltip);
+document.addEventListener('mousemove', function (e) {
+    updateTooltipPos(e, tooltip);
 }, false)
 
 function updateTooltipPos(e, el) {
@@ -71,15 +71,15 @@ var ball = document.querySelectorAll('.node');
 
 for (var i = 0; i < ball.length; i++) {
     thisBall = ball[i];
-    thisBall.addEventListener('mouseover', function (thisBall) {
-        var toIgnore = thisBall.srcElement.parentElement;
+    thisBall.addEventListener('mouseover', function (e) {
+        var toIgnore = this.parentElement;
         for (t = 0; t < ball.length; t++) {
             if (ball[t] != toIgnore) {
                 // ball[t].classList.add('fade');
                 tooltip.classList.add('summon');
 
-                // var websiteName = event.target.innerHTML;
-                var websiteName = event.target.getAttribute('js-name');
+                // var websiteName = e.target.innerHTML;
+                var websiteName = e.target.getAttribute('js-name');
 
                 // Quello che scrive dentro il tooltip //Da customizzare 
                 tooltip.innerHTML = 

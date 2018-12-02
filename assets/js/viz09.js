@@ -25,10 +25,10 @@ tooltip.id = 'tooltip';
 tooltip.innerHTML = '';
 document.body.appendChild(tooltip);
 
-document.addEventListener('mousemove', function () {
-    updateTooltipPos(event, tooltip);
-    // var currentDepth = checkDepth(event, gridYLevels);
-    // var currentOpinion = checkOpinion(event, gridXLevels);
+document.addEventListener('mousemove', function (e) {
+    updateTooltipPos(e, tooltip);
+    // var currentDepth = checkDepth(e, gridYLevels);
+    // var currentOpinion = checkOpinion(e, gridXLevels);
     // console.log("Current depth: " + currentDepth);
 }, false)
 
@@ -177,7 +177,7 @@ function loadJSON() {
 function storeJSONData(jsonObject) {
     var parsed = JSON.parse(jsonObject);
     cluster.forEach(element => {
-        element.addEventListener('mouseover', function () {
+        element.addEventListener('mouseover', function (e) {
 
             // PRIMA DI PRENDERE IL COMMENTO A CASO DEVI PRENDERE QUELLI DEL CLUSTER HOVERATO
             var whichOpinion = this.id.replace('c', '');
