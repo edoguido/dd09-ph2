@@ -2,6 +2,7 @@
 //       ( . .) ♥ ~ Il coniglio mangia tacos! 
 //       c(")(")
 
+
 // ---------------------------------------------------------------- //
 // ---- Toggle a destra che hanno richiesto troppi tacosecondi ---- //
 // ---------------------------------------------------------------- //
@@ -10,8 +11,12 @@
 $(document).ready((function(){
     $('.politic-toggle').hover(function() {
       $('.cat-dx:not(.politic)').toggleClass('off');
+      $('#rect-politic').toggleClass('grey-rect-on');
+      $('#politic-toggle').toggleClass('white-text');
     }, function() {
-        $('.cat-dx:not(.politic)').toggleClass('off');
+      $('.cat-dx:not(.politic)').toggleClass('off');
+      $('#rect-politic').toggleClass('grey-rect-on');
+      $('#politic-toggle').toggleClass('white-text');
     })
   })
 );
@@ -19,8 +24,12 @@ $(document).ready((function(){
 $(document).ready((function(){
     $('.race-toggle').hover(function() {
       $('.cat-dx:not(.race)').toggleClass('off');
+      $('#rect-race').toggleClass('grey-rect-on');
+      $('#race-toggle').toggleClass('white-text');
     }, function() {
-        $('.cat-dx:not(.race)').toggleClass('off');
+      $('.cat-dx:not(.race)').toggleClass('off');
+      $('#rect-race').toggleClass('grey-rect-on');
+      $('#race-toggle').toggleClass('white-text');
     })
   })
 );
@@ -28,8 +37,12 @@ $(document).ready((function(){
 $(document).ready((function(){
     $('.religion-toggle').hover(function() {
       $('.cat-dx:not(.religion)').toggleClass('off');
+      $('#rect-religion').toggleClass('grey-rect-on');
+      $('#religion-toggle').toggleClass('white-text');
     }, function() {
-        $('.cat-dx:not(.religion)').toggleClass('off');
+      $('.cat-dx:not(.religion)').toggleClass('off');
+      $('#rect-religion').toggleClass('grey-rect-on');
+      $('#religion-toggle').toggleClass('white-text');
     })
   })
 );
@@ -37,8 +50,12 @@ $(document).ready((function(){
 $(document).ready((function(){
     $('.knowledge-toggle').hover(function() {
       $('.cat-dx:not(.knowledge)').toggleClass('off');
+      $('#rect-knowledge').toggleClass('grey-rect-on');
+      $('#knowledge-toggle').toggleClass('white-text');
     }, function() {
-        $('.cat-dx:not(.knowledge)').toggleClass('off');
+      $('.cat-dx:not(.knowledge)').toggleClass('off');
+      $('#rect-knowledge').toggleClass('grey-rect-on');
+      $('#knowledge-toggle').toggleClass('white-text');
     })
   })
 );
@@ -46,8 +63,12 @@ $(document).ready((function(){
 $(document).ready((function(){
     $('.gender-toggle').hover(function() {
       $('.cat-dx:not(.gender)').toggleClass('off');
+      $('#rect-gender').toggleClass('grey-rect-on');
+      $('#gender-toggle').toggleClass('white-text');
     }, function() {
-        $('.cat-dx:not(.gender)').toggleClass('off');
+      $('.cat-dx:not(.gender)').toggleClass('off');
+      $('#rect-gender').toggleClass('grey-rect-on');
+      $('#gender-toggle').toggleClass('white-text');
     })
   })
 );
