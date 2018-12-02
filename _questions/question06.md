@@ -53,4 +53,4 @@ For each site we defined the main typology of presentation encountered during th
 ### Data
 ##### Data Source: [RationalWiki](https://rationalwiki.org/wiki/Category:Internet_hate_sites){:target="_blank"}{:style="cursor: alias;"}, [Wayback Machine](https://archive.org/web/){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/13/2018
-##### [View Data 72 KB)](http://densitydesign.org/)
+##### [View Data 72 KB)](/assets/datasets/3.1.xlsx)

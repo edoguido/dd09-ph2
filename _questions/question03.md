@@ -25,4 +25,4 @@ The final Excel file was then uploaded to [RawGraphs](https://rawgraphs.io/){:ta
 ### Data
 ##### Data Source: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page){:target="_blank"}{:style="cursor: alias;"}, [Wikimedia Tool Forge-Langviews Analysis](https://tools.wmflabs.org/langviews/){:target="_blank"}{:style="cursor: alias;"}, [Google Trends](https://trends.google.com/trends/?geo=US){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/15/2018
-##### [View Data (24 KB)](http://densitydesign.org/)
+##### [View Data (24 KB)](/assets/datasets/2.2.xlsx)

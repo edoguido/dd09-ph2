@@ -34,4 +34,4 @@ Many of the links on the RationalWiki list lead to closed pages, but we decided 
 ### Data
 ##### Data Source: [RationalWiki](https://rationalwiki.org/wiki/Category:Internet_hate_sites){:target="_blank"}{:style="cursor: alias;"}, [Alexa](https://www.alexa.com/){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/13/2018
-##### [View Data (72 KB)](http://densitydesign.org/)
+##### [View Data (72 KB)](/assets/datasets/3.1.xlsx)

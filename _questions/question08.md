@@ -32,4 +32,4 @@ We used the Circular Layout plug-in to position the “hatred” nodes in a circ
 ### Data
 ##### Data Source: [RationalWiki](https://rationalwiki.org/wiki/Category:Internet_hate_sites){:target="_blank"}{:style="cursor: alias;"}, [SimilarWeb](https://www.similarweb.com/){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/19/2018
-##### [View Data (33 KB)](http://densitydesign.org/)
+##### [View Data (33 KB)](/assets/datasets/3.4.xlsx)

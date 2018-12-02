@@ -25,4 +25,4 @@ At this point we decided to go even deeper, analyzing the various definitions of
 ### Data
 ##### Data Source: [Alexa](https://www.alexa.com/){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/15/2018
-##### [View Data (196 KB)](http://densitydesign.org/)
+##### [View Data (196 KB)](/assets/datasets/1.xlsx)

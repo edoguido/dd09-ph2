@@ -27,4 +27,4 @@ We imported the results in Gephi, where, after setting the nodes dimension by th
 ### Data
 ##### Data Source: [Seealsology](http://tools.medialab.sciences-po.fr/seealsology/){:target="_blank"}{:style="cursor: alias;"}, [Wikimedia Tool Forge-Pageviews Analysis](https://tools.wmflabs.org/admin/tool/pageviews){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/17/2018
-##### [View Data (59 KB)](http://densitydesign.org/)
+##### [View Data (59 KB)](/assets/datasets/2.3.xlsx)
