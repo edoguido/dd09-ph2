@@ -88,7 +88,7 @@ function updateTooltipPos(e, el) {
 
 
 
-// var grid = document.getElementById('griglia');
+//     // var unit = size / levels;// var grid = document.getElementById('griglia');
 // var gridYLevels = getLevelCoordinates('h-line');
 // var gridXLevels = getLevelCoordinates(gridWidth, 13);
 
@@ -124,7 +124,7 @@ function updateTooltipPos(e, el) {
 // }
 
 // function getLevelCoordinates(elClass) {
-//     // var unit = size / levels;
+
 //     // var sizes = []
 //     // for (var i = 1; i <= levels; i++) {
 //     //     var thisLevel = unit * i;
@@ -160,7 +160,7 @@ loadJSON();
 
 function loadJSON() {
 
-    var file = "/assets/js/kialo.json";
+    var file = "/assets/kialo.json";
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
@@ -179,34 +179,30 @@ function storeJSONData(jsonObject) {
     cluster.forEach(element => {
         element.addEventListener('mouseover', function () {
 
-            // PRIMA DI PRENDERE IL COMMENTO A CASO DEVI PRENDERE QUELLI DEL CLUSTER SELEZIONATO
-            var randomCommentNumber = getRandomInt(1, parsed.length);
-            var randomComment = parsed[randomCommentNumber - 1];
-
+            // PRIMA DI PRENDERE IL COMMENTO A CASO DEVI PRENDERE QUELLI DEL CLUSTER HOVERATO
             var whichOpinion = this.id.replace('c', '');
-            console.log(whichOpinion);
-            console.log(randomComment.opinion);
-
-            if (randomComment.opinion == whichOpinion) {
-                selectEntry(randomComment);
-            } else injectComment('', tooltip);
+            
+            var selectedEls = [];
+            parsed.forEach(element => {
+                if (element.opinion == whichOpinion) {
+                    selectedEls.push(element);
+                } else return false;
+            })
+            var randomCommentNumber = getRandomInt(1, selectedEls.length);
+            var randomComment = selectedEls[randomCommentNumber - 1];
+            selectEntry(randomComment);
         }, false);
     });
 }
 
-// cluster.forEach(element => {
-//     element.addEventListener('mouseout', function () {
-//         injectComment('', tooltip);
-//     }, false);
-// });
-
 function selectEntry(el) {
-    injectComment(el.body, tooltip);
+    injectComment(el, tooltip);
 }
 
 function injectComment(content, target) {
     // console.log(content);
-    target.innerHTML = content;
+    target.innerHTML = "&lsquo;" + content.body + "&rsquo;" + "<br><br>" + 
+    "Tree: " + content.tree + " (Level " + content.level + ")";
 }
 
 function getRandomInt(min, max) {
