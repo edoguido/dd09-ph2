@@ -22,7 +22,7 @@ var contatore = 0;
 function draw() {
   var volume = mic.getLevel();
   // console.log(volume);
-  mappedVolume = map(volume, 0, 0.0075, 1, 7);
+  mappedVolume = map(volume, 0, 0.05, 1, 7);
   // console.log(mappedVolume);
 
 
@@ -87,7 +87,7 @@ function draw() {
     //stroke(800, t, 100)
     strokeWeight(3);
     var ang = map(i, 0, giroCompleto, 0, TWO_PI);
-    var rad = 400 * noise(i * 0.01, t * 0.005);
+    var rad = 600 * noise(i * 0.01, t * 0.005);
     var x = rad * cos(ang);
     var y = rad * sin(ang);
     vertex(x, y);
