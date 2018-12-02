@@ -1,7 +1,8 @@
 var t;
 var colors= ['#8FA5FF','#150FAA','#0033FF','#DAA1FF','#650499','#CE3B19','#F78028','#F2C005'];
 var giroCompleto = 360;
-
+var mic;
+var mappedVolume;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
@@ -9,11 +10,19 @@ function setup() {
   noFill();
   t = 0;
 
+  mic= new p5.AudioIn();
+  //facciamolo partire sto audio input
+  mic.start();
+
 }
 
 var contatore = 0;
 
 function draw() {
+  var volume= mic.getLevel();
+  console.log(volume);
+  mappedVolume = map(volume,0,0.15,1,7);
+  console.log(mappedVolume);
 
 
 //background(255);
@@ -22,7 +31,7 @@ function draw() {
   var colorProgress = frameCount % giroCompleto;
 
   var mappedColor = map(colorProgress,0, giroCompleto - 1 ,0, 1);
-  console.log(mappedColor);
+  //console.log(mappedColor);
   //console.log(contatore);
 // if (contatore==1){
 //   stroke('GREEN');
@@ -79,7 +88,7 @@ console.log(contatore);
       //stroke(800, t, 100)
       strokeWeight(3);
       var ang = map(i, 0, giroCompleto, 0, TWO_PI);
-      var rad = 900 * noise(i * 0.01, t * 0.005);
+      var rad = 900 * noise(i * 0.01 , t * 0.005);
       var x = rad * cos(ang);
       var y = rad * sin(ang);
       vertex(x, y);
@@ -87,7 +96,7 @@ console.log(contatore);
 
   endShape(CLOSE);
 
-  t += 0.5;
+  t += 0.2 * mappedVolume;
 
 
 
