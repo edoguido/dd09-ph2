@@ -22,7 +22,7 @@ var contatore = 0;
 function draw() {
   var volume = mic.getLevel();
   // console.log(volume);
-  mappedVolume = map(volume, 0, 0.0075, 1, 7);
+  mappedVolume = map(volume, 0, 0.05, 1, 7);
   // console.log(mappedVolume);
 
 
