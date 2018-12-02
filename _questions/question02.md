@@ -24,4 +24,4 @@ At first, we wanted to understand in how many languages of Wikipedia there was a
 ### Data
 ##### Data Source: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page){:target="_blank"}{:style="cursor: alias;"}, [Wikipedia-XTools](https://xtools.wmflabs.org/){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/15/2018
-##### [View Data (104 KB)](http://densitydesign.org/)
+##### [View Data (104 KB)](/assets/datasets/2.1.xlsx)

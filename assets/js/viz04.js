@@ -102,7 +102,7 @@ for (var i = 0; i < ball.length; i++) {
 $(document).ready((function(){
     $(".node").each(function(){
         var wikiLink = $(this).attr('js-name').split(' ').join('_');
-        $(this).parent().attr('href', "https://en.wikipedia.org/wiki/" + wikiLink);
+        $(this).parent().attr('xlink:href', "https://en.wikipedia.org/wiki/" + wikiLink);
     });
   })
 );

@@ -36,4 +36,4 @@ Since on SimilarWeb the traffic sources are expressed as a percentage, we opted 
 ### Data
 ##### Data Source: [SimilarWeb](https://www.similarweb.com/){:target="_blank"}{:style="cursor: alias;"}, [Alexa](https://www.alexa.com/){:target="_blank"}{:style="cursor: alias;"}
 ##### Timestamp: 11/12/2018
-##### [View Data (19 KB)](http://densitydesign.org/)
+##### [View Data (19 KB)](/assets/datasets/3.3.xlsx)
