@@ -8,6 +8,10 @@ nav {
     pointer-events: none;
 }
 
+.nav__container::-webkit-scrollbar { 
+    display: none; 
+}
+
 .nav__container {
     position: absolute;
     top: 0;
@@ -15,6 +19,7 @@ nav {
     width: 0;
     height: 100vh;
     overflow-x: hidden;
+    
     background-color: var(--color-dark);
     -webkit-transition: width 0.75s cubic-bezier(.6,0,.4,1);
     transition: width 0.75s cubic-bezier(.6,0,.4,1);
