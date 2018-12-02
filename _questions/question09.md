@@ -18,6 +18,7 @@ The idea to use discussions on [Kialo](https://kialo.com){:target="_blank"}{:sty
 
 The second visualization clarifies the reason why we chose Kialo for our analysis in the first place: the discussion has a climax at the second nesting level and then the comments gradually decrease, so the lively debate takes place in the very first part of the whole post dedicated to the controversy. But the most important thing that we noticed is that the majority of the comments were classified as “analytical” and that corresponded with the moderated style that Kialo wants to promote in the discussions. This classification was made with the help of the [IBM Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/){:target="_blank"}{:style="cursor: alias;"}, an API that clusterized the comments in seven categories—“joy”, “confident”, “anger”, “sadness”, “tentative”, “analytical” and “fear”—due to the different tones used throughout the two discussions. The nesting level of the comments corresponds to the distance from the query that generated the discussion, so the level “0” coincides with the very first comments. 
 
+![Secondary visualization]({{ '/assets/images/secondary-viz-kialo.svg' | relative_url }})
 
 ### Protocol
 <img src="{{ '/assets/images/protocols/protocol-09.png' | relative_path }}">
