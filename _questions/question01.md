@@ -18,7 +18,6 @@ We based this very first protocol on the classification made by [Alexa](https://
 
 At this point we decided to go even deeper, analyzing the various definitions of Hate Speech that were given by those sites. During the examination emerged seven different categories that sum up the main opinions about the debate: “Hate speech leads to hate crime”, “Hate speech is harmful and needs to be regulated”, “Hate speech must be fought with more speech”, “We still don’t know what hate speech is”, “Hate speech is hate speech only when it causes real reactions”, “Hate speech is free speech”, “Hate speech is a construct used to kill free speech”. The Excel file that resulted was uploaded on [RawGraphs](https://rawgraphs.io/){:target="_blank"}{:style="cursor: alias;"} in order to start displaying the data; the resulting SVG file was later refined with Adobe Illustrator.
 
-### 
 
 ### Data
 ##### Data Source: [Alexa](https://www.alexa.com/)
