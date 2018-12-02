@@ -132,6 +132,9 @@ for (i = 0; i < toggles.length; i++) {
     }, false);
 }
 
+// SE NON FUNZIONA IL FADE DELLE ROBE
+// DE-COMMENTA ID="MAPPA_COMPLETA" NELL'HTML
+
 var ids = ['Mappa_completa', 'U.S.', 'Germany', 'Twitter', 'Nadine_strossen', 'Google', 'Facebook'];
 
 function fadeOthers(toIgnore) {
